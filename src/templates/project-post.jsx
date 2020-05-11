@@ -12,7 +12,7 @@ import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
 
-export default class PostTemplate extends React.Component {
+export default class ProjectPostTemplate extends React.Component {
   render() {
     const { data, pageContext } = this.props;
     const { slug } = pageContext;
@@ -48,7 +48,7 @@ export default class PostTemplate extends React.Component {
 
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query ProjectPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
@@ -67,3 +67,4 @@ export const pageQuery = graphql`
     }
   }
 `;
+

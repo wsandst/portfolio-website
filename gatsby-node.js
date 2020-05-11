@@ -41,7 +41,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const postPage = path.resolve("src/templates/post.jsx");
+  const blogPostPage = path.resolve("src/templates/blog-post.jsx");
+  const projectPostPage = path.resolve("src/templates/blog-post.jsx");
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
   const listingPage = path.resolve("./src/templates/listing.jsx");
@@ -49,8 +50,23 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
-    {
-      allMarkdownRemark {
+   {
+    blogPosts: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(blog)/"  }}) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                tags
+                category
+                date
+              }
+            }
+          }
+        }
+    projectPosts: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(projects)/"  }}) {
         edges {
           node {
             fields {
@@ -76,7 +92,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const tagSet = new Set();
   const categorySet = new Set();
 
-  const postsEdges = markdownQueryResult.data.allMarkdownRemark.edges;
+  const postsEdges = markdownQueryResult.data.projectPosts.edges;
 
   // Sort posts
   postsEdges.sort((postA, postB) => {
@@ -143,7 +159,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     createPage({
       path: edge.node.fields.slug,
-      component: postPage,
+      component: blogPostPage,
       context: {
         slug: edge.node.fields.slug,
         nexttitle: nextEdge.node.frontmatter.title,
