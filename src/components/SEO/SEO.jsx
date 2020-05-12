@@ -26,13 +26,19 @@ class SEO extends Component {
       image = config.siteLogo;
     }
 
+    //Yanky solution, is this even needed?
     const getImagePath = imageURI => {
+      if (typeof imageURI === 'string')
+      {
       if (
         !imageURI.match(
           `(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
         )
       )
         return urljoin(config.siteUrl, config.pathPrefix, imageURI);
+        }
+      else
+        return imageURI.childImageSharp.fixed.src;
 
       return imageURI;
     };

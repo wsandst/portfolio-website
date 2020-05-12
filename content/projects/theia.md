@@ -1,6 +1,6 @@
 ---
 title: "Theia, a software renderer"
-cover: "test3.jpg"
+cover: "./test3.jpg"
 date: "2017-03-01"
 category: "tech"
 tags:

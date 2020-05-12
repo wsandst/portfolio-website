@@ -1,6 +1,6 @@
 ---
 title: "Magnificence 2 - a modern UCI Chess Engine"
-cover: "test.jpg"
+cover: "./test.jpg"
 date: "2017-01-01"
 category: "tech"
 tags:

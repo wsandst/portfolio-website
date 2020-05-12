@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
-import PostListing from "../components/PostListing/PostListing";
+import ProjectListing from "../components/ProjectListing/ProjectListing";
 import config from "../../data/SiteConfig";
 
 export default class CategoryTemplate extends React.Component {
@@ -15,7 +15,7 @@ export default class CategoryTemplate extends React.Component {
           <Helmet
             title={`Posts in category "${category}" | ${config.siteTitle}`}
           />
-          <PostListing postEdges={postEdges} />
+          <ProjectListing postEdges={postEdges} />
         </div>
       </Layout>
     );
@@ -42,7 +42,13 @@ export const pageQuery = graphql`
           frontmatter {
             title
             tags
-            cover
+            cover {
+              childImageSharp {
+              fixed(width: 125, height: 125) {
+                ...GatsbyImageSharpFixed
+                  }
+              }
+            }
             date
           }
         }

@@ -1,6 +1,6 @@
 ---
 title: "Real-time GPU Raytracer"
-cover: "test4.jpg"
+cover: "./test4.jpg"
 category: "tech"
 date: "2017-03-17"
 tags:

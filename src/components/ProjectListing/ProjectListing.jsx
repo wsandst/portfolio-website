@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
+import Img from "gatsby-image"
 
-class PostListing extends React.Component {
+class ProjectListing extends React.Component {
   getPostList() {
     const postList = [];
     this.props.postEdges.forEach(postEdge => {
@@ -20,17 +21,25 @@ class PostListing extends React.Component {
 
   render() {
     const postList = this.getPostList();
+    console.log(postList);
     return (
       <div>
         {/* Your post list here. */
         postList.map(post => (
-          <Link to={post.path} key={post.title}>
-            <h1>{post.title}</h1>
-          </Link>
+          <div>
+            <Link to={post.path} key={post.title}>
+              <h1>{post.title}</h1>
+            </Link>
+            <Img
+            className="project-cover"
+            fixed={post.cover.childImageSharp.fixed}
+            alt="cover"
+            />
+          </div>
         ))}
       </div>
     );
   }
 }
 
-export default PostListing;
+export default ProjectListing;

@@ -4,7 +4,7 @@ import Layout from "../layout";
 import About from "../components/About/About";
 import config from "../../data/SiteConfig";
 import SEO from "../components/SEO/SEO";
-import PostListing from "../components/PostListing/PostListing";
+import ProjectListing from "../components/ProjectListing/ProjectListing";
 
 class HomePage extends React.Component {
     render() {
@@ -16,7 +16,7 @@ class HomePage extends React.Component {
               <Helmet title={config.siteTitle} />
               <SEO />
               <h1>Home page</h1>
-              <PostListing postEdges={postEdges} />
+              <ProjectListing postEdges={postEdges} />
             </div>
           </div>
         </Layout>
@@ -43,7 +43,13 @@ class HomePage extends React.Component {
             frontmatter {
               title
               tags
-              cover
+              cover {
+                childImageSharp {
+                fixed(width: 274, height: 365, quality:90) {
+                  ...GatsbyImageSharpFixed
+                    }
+                }
+              }
               date
             }
           }

@@ -1,6 +1,6 @@
 ---
 title: "Covid 19 Scraper"
-cover: "test2.jpg"
+cover: "./test2.jpg"
 category: "moar"
 date: "2018-03-01"
 slug: "covid-19-scraper"
