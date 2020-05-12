@@ -45,8 +45,6 @@ exports.createPages = async ({ graphql, actions }) => {
   const projectPostPage = path.resolve("src/templates/blog-post.jsx");
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
-  const listingPage = path.resolve("./src/templates/listing.jsx");
-  const landingPage = path.resolve("./src/templates/landing.jsx");
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
@@ -92,10 +90,11 @@ exports.createPages = async ({ graphql, actions }) => {
   const tagSet = new Set();
   const categorySet = new Set();
 
-  const postsEdges = markdownQueryResult.data.projectPosts.edges;
+  const blogPostsEdges = markdownQueryResult.data.blogPosts.edges;
+  const projectPostsEdges = markdownQueryResult.data.projectPosts.edges;
 
   // Sort posts
-  postsEdges.sort((postA, postB) => {
+  blogPostsEdges.sort((postA, postB) => {
     const dateA = moment(
       postA.node.frontmatter.date,
       siteConfig.dateFromFormat
@@ -112,33 +111,26 @@ exports.createPages = async ({ graphql, actions }) => {
     return 0;
   });
 
-  // Paging
-  const { postsPerPage } = siteConfig;
-  if (postsPerPage) {
-    const pageCount = Math.ceil(postsEdges.length / postsPerPage);
+  // Sort posts
+  projectPostsEdges.sort((postA, postB) => {
+    const dateA = moment(
+      postA.node.frontmatter.date,
+      siteConfig.dateFromFormat
+    );
 
-    [...Array(pageCount)].forEach((_val, pageNum) => {
-      createPage({
-        path: pageNum === 0 ? `/` : `/${pageNum + 1}/`,
-        component: listingPage,
-        context: {
-          limit: postsPerPage,
-          skip: pageNum * postsPerPage,
-          pageCount,
-          currentPageNum: pageNum + 1
-        }
-      });
-    });
-  } else {
-    // Load the landing page instead
-    createPage({
-      path: `/`,
-      component: landingPage
-    });
-  }
+    const dateB = moment(
+      postB.node.frontmatter.date,
+      siteConfig.dateFromFormat
+    );
+
+    if (dateA.isBefore(dateB)) return 1;
+    if (dateB.isBefore(dateA)) return -1;
+
+    return 0;
+  });
 
   // Post page creating
-  postsEdges.forEach((edge, index) => {
+  blogPostsEdges.forEach((edge, index) => {
     // Generate a list of tags
     if (edge.node.frontmatter.tags) {
       edge.node.frontmatter.tags.forEach(tag => {
@@ -151,21 +143,33 @@ exports.createPages = async ({ graphql, actions }) => {
       categorySet.add(edge.node.frontmatter.category);
     }
 
-    // Create post pages
-    const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
-    const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
-    const nextEdge = postsEdges[nextID];
-    const prevEdge = postsEdges[prevID];
-
     createPage({
       path: edge.node.fields.slug,
       component: blogPostPage,
       context: {
         slug: edge.node.fields.slug,
-        nexttitle: nextEdge.node.frontmatter.title,
-        nextslug: nextEdge.node.fields.slug,
-        prevtitle: prevEdge.node.frontmatter.title,
-        prevslug: prevEdge.node.fields.slug
+      }
+    });
+  });
+
+  projectPostsEdges.forEach((edge, index) => {
+    // Generate a list of tags
+    if (edge.node.frontmatter.tags) {
+      edge.node.frontmatter.tags.forEach(tag => {
+        tagSet.add(tag);
+      });
+    }
+
+    // Generate a list of categories
+    if (edge.node.frontmatter.category) {
+      categorySet.add(edge.node.frontmatter.category);
+    }
+
+    createPage({
+      path: edge.node.fields.slug,
+      component: projectPostPage,
+      context: {
+        slug: edge.node.fields.slug,
       }
     });
   });
