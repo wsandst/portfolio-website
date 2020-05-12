@@ -5,17 +5,19 @@ import Header from "../layout/header";
 import config from "../../data/SiteConfig";
 import SEO from "../components/SEO/SEO";
 import ProjectListing from "../components/ProjectListing/ProjectListing";
+import AboutShort from "../components/About/AboutShort";
 
 class HomePage extends React.Component {
     render() {
       const postEdges = this.props.data.allMarkdownRemark.edges;
       return (
         <MainLayout>
+        <Helmet title={config.siteTitle} />
+        <SEO />
         <Header>
           <div className="landing-container">
+            <AboutShort></AboutShort>
             <div className="posts-container">
-              <Helmet title={config.siteTitle} />
-              <SEO />
               <ProjectListing postEdges={postEdges} />
             </div>
           </div>

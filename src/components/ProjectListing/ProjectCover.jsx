@@ -17,7 +17,7 @@ class ProjectCover extends React.Component {
       return (
         <ProjectBoxCSS>
             <Link to={post.path} key={post.title}>
-            <div css={css`background-color: gray; padding: ${rhythm(0.6)}; width: 300px; word-wrap: break-word;`}>
+            <div css={css`border-radius: 3px; background-color: gray; padding: ${rhythm(0.6)}; width: 300px; word-wrap: break-word;`}>
               <div css={css`position: relative; padding-bottom: ${rhythm(1.8)}`}>
                 <h1 css={css`position: absolute; font-size:95%;`}>{post.title}</h1>
               </div>
@@ -25,6 +25,7 @@ class ProjectCover extends React.Component {
               className="project-cover"
               fixed={post.cover.childImageSharp.fixed}
               alt="cover"
+              css={css`border-radius: 3px;`}
               />
             </div>
             </Link>
