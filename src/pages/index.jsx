@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
-import Layout from "../layout";
-import About from "../components/About/About";
+import MainLayout from "../layout/layout";
+import Header from "../layout/header";
 import config from "../../data/SiteConfig";
 import SEO from "../components/SEO/SEO";
 import ProjectListing from "../components/ProjectListing/ProjectListing";
@@ -10,16 +10,17 @@ class HomePage extends React.Component {
     render() {
       const postEdges = this.props.data.allMarkdownRemark.edges;
       return (
-        <Layout>
+        <MainLayout>
+        <Header>
           <div className="landing-container">
             <div className="posts-container">
               <Helmet title={config.siteTitle} />
               <SEO />
-              <h1>Home page</h1>
               <ProjectListing postEdges={postEdges} />
             </div>
           </div>
-        </Layout>
+          </Header>
+        </MainLayout>
       );
     }
   }

@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image"
 
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
+import ProjectCover from "./ProjectCover"
+
 class ProjectListing extends React.Component {
   getPostList() {
     const postList = [];
@@ -23,19 +27,10 @@ class ProjectListing extends React.Component {
     const postList = this.getPostList();
     console.log(postList);
     return (
-      <div>
+      <div css={css`display: flex; justify-content: center; flex-wrap: wrap`}>
         {/* Your post list here. */
         postList.map(post => (
-          <div>
-            <Link to={post.path} key={post.title}>
-              <h1>{post.title}</h1>
-            </Link>
-            <Img
-            className="project-cover"
-            fixed={post.cover.childImageSharp.fixed}
-            alt="cover"
-            />
-          </div>
+          <ProjectCover post={post}/>
         ))}
       </div>
     );
