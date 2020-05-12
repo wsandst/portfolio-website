@@ -27,9 +27,11 @@ class HomePage extends React.Component {
   export default HomePage;
   
   /* eslint no-undef: "off" */
+  // Show only pinned projects
   export const pageQuery = graphql`
     query IndexQuery {
-      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(projects)/"  }}, sort: { fields: [fields___date], order: DESC }) {
+      allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(projects)/"  }, frontmatter:{ tags: { in: ["pinned"] } }}, sort: { fields: [fields___date], order: DESC })
+      {
         edges {
           node {
             fields {

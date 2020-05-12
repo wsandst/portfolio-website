@@ -1,6 +1,6 @@
 ---
-title: "The Fairy's Witches"
-cover: "3.jpg"
+title: "Not a pinned project"
+cover: "test5.jpg"
 category: "something"
 date: "2017-04-02"
 ---

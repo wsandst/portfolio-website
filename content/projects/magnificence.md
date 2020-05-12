@@ -1,12 +1,13 @@
 ---
-title: "Bold Mage"
-cover: "8.jpg"
+title: "Magnificence 2 - a modern UCI Chess Engine"
+cover: "test.jpg"
 date: "2017-01-01"
 category: "tech"
 tags:
     - programming
     - stuff
     - other
+    - pinned
 ---
 
 # Quanto et ius coniunctis urbes

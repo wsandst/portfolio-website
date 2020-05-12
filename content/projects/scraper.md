@@ -1,10 +1,11 @@
 ---
-title: "Big Test"
-cover: "5.jpg"
+title: "Covid 19 Scraper"
+cover: "test2.jpg"
 category: "moar"
 date: "2018-03-01"
-slug: "Big-Sample_Test"
+slug: "covid-19-scraper"
 tags:
+    - pinned
     - test
     - huge
 ---

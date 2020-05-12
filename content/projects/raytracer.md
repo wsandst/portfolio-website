@@ -1,9 +1,10 @@
 ---
-title: "The Butterfly of the Edge"
-cover: "2.jpg"
+title: "Real-time GPU Raytracer"
+cover: "test4.jpg"
 category: "tech"
 date: "2017-03-17"
 tags:
+    - pinned
     - programming
     - more tags
     - testing

@@ -1,9 +1,10 @@
 ---
-title: "Birch in the Roses"
-cover: "1.jpg"
+title: "Theia, a software renderer"
+cover: "test3.jpg"
 date: "2017-03-01"
 category: "tech"
 tags:
+    - pinned
     - tag
 ---
 
