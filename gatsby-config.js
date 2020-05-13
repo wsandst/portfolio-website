@@ -88,6 +88,7 @@ module.exports = {
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",
     `gatsby-plugin-emotion`,
+    'gatsby-plugin-dark-mode',
     {
       resolve: "gatsby-plugin-manifest",
       options: {

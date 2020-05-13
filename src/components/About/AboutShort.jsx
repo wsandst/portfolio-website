@@ -23,8 +23,10 @@ export default function AboutShort() {
         <div css={css`height:180px; display: flex; justify-content: center; `}>
         <Img fixed={data.file.childImageSharp.fixed} css={css`border-radius: 50%`}> </Img>
         <h1>Hello there. I'm William.</h1>
+        <span>
         I'm a self-taught full-stack developer.
         You can read about my projects here.
+        </span>
         </div>
         <hr></hr>
       </div>

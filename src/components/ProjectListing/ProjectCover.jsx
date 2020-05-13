@@ -5,15 +5,17 @@ import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { rhythm, scale } from "../../utils/typography"
+import "../../layout/layout.css";
 
 const ProjectBoxCSS = styled.div`
 border-radius: 3px; 
-background-color: 
-gray; padding: ${rhythm(0.6)}; 
+background-color: var(--bgup1);
+padding: ${rhythm(0.6)}; 
 width: 300px; word-wrap: break-word;
 transition: all .3s ease;
+box-shadow: 2px 6px 30px var(--backgroundShadow);
 &:hover {
-  box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 6px 30px var(--highlightShadow);
 }
 `
 
