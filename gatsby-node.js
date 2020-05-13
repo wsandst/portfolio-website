@@ -42,7 +42,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const blogPostPage = path.resolve("src/templates/blog-post.jsx");
-  const projectPostPage = path.resolve("src/templates/blog-post.jsx");
+  const projectPostPage = path.resolve("src/templates/project-post.jsx");
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
 

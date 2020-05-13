@@ -9,8 +9,20 @@ import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
+import Header from "../layout/header";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
+
+
+const MarkdownLayout = styled.div`
+    max-width: 800px;
+    padding: 0 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  `
 
 export default class ProjectPostTemplate extends React.Component {
   render() {
@@ -24,28 +36,28 @@ export default class ProjectPostTemplate extends React.Component {
 
     return (
       <Layout>
-        <div>
-          <Helmet>
-            <title>{`${post.title} | ${config.siteTitle}`}</title>
-          </Helmet>
+        <Header>
+        <Helmet>
+          <title>{`${post.title} | ${config.siteTitle}`}</title>
+        </Helmet>
+        <MarkdownLayout>
           <SEO postPath={slug} postNode={postNode} postSEO />
           <div>
             <h1>{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <div className="post-meta">
               <PostTags tags={post.tags} />
-              <SocialLinks postPath={slug} postNode={postNode} />
             </div>
-            <UserInfo config={config} />
-            <Disqus postNode={postNode} />
-            <Footer config={config} />
           </div>
-        </div>
+        </MarkdownLayout>
+        </Header>
       </Layout>
     );
   }
 }
 
+//<SocialLinks postPath={slug} postNode={postNode} />
+//<Disqus postNode={postNode} />
 /* eslint no-undef: "off" */
 export const pageQuery = graphql`
   query ProjectPostBySlug($slug: String!) {
@@ -57,7 +69,7 @@ export const pageQuery = graphql`
         title
         cover {
           childImageSharp {
-          fixed(width: 125, height: 125) {
+          fixed(width: 274, height: 365, quality:90) {
             ...GatsbyImageSharpFixed
               }
           }

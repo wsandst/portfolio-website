@@ -26,6 +26,7 @@ export default class BlogPostTemplate extends React.Component {
       <Layout>
         <div>
           <Helmet>
+            <h1> FUCK </h1>
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
@@ -36,9 +37,7 @@ export default class BlogPostTemplate extends React.Component {
               <PostTags tags={post.tags} />
               <SocialLinks postPath={slug} postNode={postNode} />
             </div>
-            <UserInfo config={config} />
             <Disqus postNode={postNode} />
-            <Footer config={config} />
           </div>
         </div>
       </Layout>

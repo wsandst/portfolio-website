@@ -12,7 +12,7 @@ body {
   --textNormal: #333;
   --textTitle: #1A1A1A;
   --textHighlight: #666666;
-  --textLink: rgb(28, 29, 31);
+  --textLink: #6AB0F3;
   --hr: hsla(0, 0%, 0%, 0.2);
   --highlightShadow: rgba(0, 0, 0, 0.5);
   --backgroundShadow: rgba(0, 0, 0, 0.25);
