@@ -10,13 +10,15 @@ body {
   --bg: white;
   --bgup1: white;
   --textNormal: #333;
-  --textTitle: #222;
-  --textLink: #6AB0F3;
+  --textTitle: #1A1A1A;
+  --textHighlight: #666666;
+  --textLink: rgb(28, 29, 31);
   --hr: hsla(0, 0%, 0%, 0.2);
-  --highlightShadow: rgba(0, 0, 0, 0.4);
-  --backgroundShadow: rgba(0, 0, 0, 0.2);
+  --highlightShadow: rgba(0, 0, 0, 0.5);
+  --backgroundShadow: rgba(0, 0, 0, 0.25);
 
   background-color: var(--bg);
+  color: var(--textNormal);
   transition: all .3s ease;
 }
 
@@ -27,9 +29,10 @@ body.dark {
   --bgup1: #4A4A4A;
   --textNormal: rgba(255, 255, 255, 0.88);
   --textTitle: white;
+  --textHighlight: rgba(255, 255, 255, 0.80);
   --hr: hsla(0, 0%, 100%, 0.2);
-  --highlightShadow: rgba(0, 0, 0, 0.8);
-  --backgroundShadow: rgba(0, 0, 0, 0.4);
+  --highlightShadow: rgba(0, 0, 0, 1);
+  --backgroundShadow: rgba(0, 0, 0, 0.6);
 }
 
 body {

@@ -16,6 +16,7 @@ transition: all .3s ease;
 box-shadow: 2px 6px 30px var(--backgroundShadow);
 &:hover {
   box-shadow: 2px 6px 30px var(--highlightShadow);
+  h1 {transition: all .3s ease; color: var(--textHighlight);}
 }
 `
 

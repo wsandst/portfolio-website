@@ -12,7 +12,10 @@ import "./layout.css";
 //CSS
 const HeaderLink = styled(Link)`
   padding-left: ${rhythm(1.5)}; 
-  color: var(--textTitle)
+  color: var(--textTitle);
+  &:hover {
+    color: var(--textHighlight);
+  }
   `
 
 const DarkModeToggleButtonCSS = styled.div
@@ -47,6 +50,11 @@ export default class Header extends React.Component {
       <div css={css`display: flex; justify-content:flex-end`}>
         <div css={css`
                 margin-right: auto;
+                h3
+                {
+                &:hover {
+                  color: var(--textHighlight);
+                }
                 @media (max-width: 550px)
                 {
                   display: none;
