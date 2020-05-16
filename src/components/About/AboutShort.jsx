@@ -28,7 +28,7 @@ export default function AboutShort() {
           </div>
           <div css={css`margin-left: ${rhythm(1.5)}; margin-bottom: ${rhythm(1)}; display: flex; flex-direction: column; justify-content: center; h2{margin:0}
           @media (max-width: 550px) {margin-left: 0 }`}>
-            <h2>Hello there. I'm William.</h2>
+            <h2 css={css`padding-bottom: ${rhythm(0.2)}`}> Hello there. I'm William.</h2>
             <span>
             I'm a self-taught full-stack developer.
             </span>

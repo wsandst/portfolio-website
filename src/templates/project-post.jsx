@@ -7,6 +7,7 @@ import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
+import ProjectSummary from "../components/ProjectSummary";
 import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
 import Header from "../layout/header";
@@ -40,10 +41,11 @@ export default class ProjectPostTemplate extends React.Component {
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
+        <ProjectSummary post={post}> </ProjectSummary>
+        <hr></hr>
         <MarkdownLayout>
           <SEO postPath={slug} postNode={postNode} postSEO />
           <div>
-            <h1>{post.title}</h1>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <div className="post-meta">
               <PostTags tags={post.tags} />
@@ -69,7 +71,10 @@ export const pageQuery = graphql`
         title
         cover {
           childImageSharp {
-          fixed(width: 274, height: 365, quality:90) {
+            fluid(maxWidth: 372, maxHeight: 494, quality:90) {
+              ...GatsbyImageSharpFluid
+            }
+            fixed(width: 372, height: 494, quality:90) {
             ...GatsbyImageSharpFixed
               }
           }
@@ -77,6 +82,8 @@ export const pageQuery = graphql`
         date
         category
         tags
+        description
+        aim
       }
       fields {
         slug
