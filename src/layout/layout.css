@@ -9,6 +9,8 @@ html {
 body {
   --bg: white;
   --bgup1: white;
+  --button: #F2F2F2;
+  --buttondown: rgb(212, 212, 212);
   --textNormal: #333;
   --textTitle: #1A1A1A;
   --textHighlight: #666666;
@@ -27,6 +29,8 @@ body.dark {
 
   --bg: #202020;
   --bgup1: #4A4A4A;
+  --button: rgb(87, 87, 87);
+  --buttondown: #4A4A4A;
   --textNormal: rgba(255, 255, 255, 0.88);
   --textTitle: white;
   --textHighlight: rgba(255, 255, 255, 0.80);

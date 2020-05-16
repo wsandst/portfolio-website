@@ -13,6 +13,7 @@ tags:
     - other
 description: "A test project"
 aim: "The aim of this project was to improve on the foundations laid by Magnificence 1 and allow for future testing with various machine learning technologies."
+github: "https://github.com/wsandst/gpu-pathtracer"
 ---
 
 # Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum

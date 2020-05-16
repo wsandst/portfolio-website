@@ -8,6 +8,7 @@ import { rhythm, scale } from "../utils/typography"
 
 import PostTags from "./PostTags/PostTags";
 import "../layout/layout.css";
+import GitHubButton from "../../node_modules/react-github-btn/index";
 
 class ProjectSummary extends React.Component {  
     render() {
@@ -26,8 +27,11 @@ class ProjectSummary extends React.Component {
                     <h3 css={css`margin-bottom: ${rhythm(0.2)}`}> Aim </h3>
                     <span> {post.aim} </span>
                 </div>
-                <div>
+                <div css={css`margin-top: ${rhythm(0.7)}; margin-bottom: ${rhythm(0.4)}`} >
                     <PostTags tags={post.tags} />
+                </div>
+                <div>
+                    <GitHubButton href={post.github} data-size="large"> View Code</GitHubButton>
                 </div>
             </div>
         </div>

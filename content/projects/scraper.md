@@ -10,6 +10,7 @@ tags:
     - huge
 description: "A test project"
 aim: "The aim of this project was to improve on the foundations laid by Magnificence 1 and allow for future testing with various machine learning technologies."
+github: "https://github.com/wsandst/covid19-scraper-bot"
 ---
 
 # NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
