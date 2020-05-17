@@ -3,8 +3,7 @@ import { graphql } from "gatsby";
 
 import Helmet from "react-helmet";
 
-import Layout from "../layout/layout";
-import Header from "../layout/header";
+import MainLayout from "../layout/layout";
 import ProjectListing from "../components/ProjectListing";
 import config from "../../data/SiteConfig";
 
@@ -12,16 +11,12 @@ class ProjectsPage extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <div>
+      <MainLayout>
         <Helmet title={`Projects | ${config.siteTitle}`} />
-        <Header>
-        </Header>
-        <Layout>
-          <div className="projects-container">
-            <ProjectListing postEdges={postEdges} />
-          </div>
-        </Layout>
-      </div>
+        <div className="projects-container">
+          <ProjectListing postEdges={postEdges} />
+        </div>
+      </MainLayout>
     );
   }
 }

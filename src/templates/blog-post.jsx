@@ -11,6 +11,7 @@ import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
+import MainLayout from "../layout/layout";
 
 export default class BlogPostTemplate extends React.Component {
   render() {
@@ -23,23 +24,19 @@ export default class BlogPostTemplate extends React.Component {
     }
 
     return (
-      <div>
-      <Layout>
+      <MainLayout>
+        <Helmet>
+          <title>{`${post.title} | ${config.siteTitle}`}</title>
+        </Helmet>
+        <SEO postPath={slug} postNode={postNode} postSEO />
         <div>
-          <Helmet>
-            <title>{`${post.title} | ${config.siteTitle}`}</title>
-          </Helmet>
-          <SEO postPath={slug} postNode={postNode} postSEO />
-          <div>
-            <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <div className="post-meta">
-              <PostTags tags={post.tags} />
-            </div>
+          <h1>{post.title}</h1>
+          <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+          <div className="post-meta">
+            <PostTags tags={post.tags} />
           </div>
         </div>
-      </Layout>
-      </div>
+      </MainLayout>
     );
   }
 }

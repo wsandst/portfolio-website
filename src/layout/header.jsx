@@ -1,10 +1,12 @@
 import React from "react"
+import { Link } from "gatsby"
+
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-import { useStaticQuery, Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
-import config from "../../data/SiteConfig";
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+
+import config from "../../data/SiteConfig";
 import lighticon from '../../static/light.svg'
 import darkicon from '../../static/dark.svg'
 import "./layout.css";

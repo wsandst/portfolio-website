@@ -4,11 +4,12 @@ import Img from "gatsby-image"
 
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
+import GitHubButton from "../../node_modules/react-github-btn/index";
 
 import PostTags from "./PostTags";
 import "../layout/layout.css";
-import GitHubButton from "../../node_modules/react-github-btn/index";
+
 
 class ProjectSummary extends React.Component {  
     render() {

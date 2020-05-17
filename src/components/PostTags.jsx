@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import _ from "lodash";
 import { Link } from "gatsby";
 
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
-import { rhythm } from "../utils/typography"
+import _ from "lodash";
+
 import "../layout/layout.css";
 
 /*a {

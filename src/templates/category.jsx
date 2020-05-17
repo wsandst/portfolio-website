@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 
 import Helmet from "react-helmet";
 
-import Layout from "../layout/layout";
+import MainLayout from "../layout/layout";
 import ProjectListing from "../components/ProjectListing";
 import config from "../../data/SiteConfig";
 
@@ -12,14 +12,14 @@ export default class CategoryTemplate extends React.Component {
     const { category } = this.props.pageContext;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <Layout>
+      <MainLayout>
         <div className="category-container">
           <Helmet
             title={`Posts in category "${category}" | ${config.siteTitle}`}
           />
           <ProjectListing postEdges={postEdges} />
         </div>
-      </Layout>
+      </MainLayout>
     );
   }
 }

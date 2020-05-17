@@ -5,8 +5,7 @@ import Helmet from "react-helmet";
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
-import Layout from "../layout/layout";
-import Header from "../layout/header";
+import MainLayout from "../layout/layout";
 import PostTags from "../components/PostTags";
 import SEO from "../components/SEO";
 import ProjectSummary from "../components/ProjectSummary";
@@ -32,25 +31,22 @@ export default class ProjectPostTemplate extends React.Component {
     }
 
     return (
-      <div>
+      <MainLayout>
        <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
-        <Header> </Header>
-        <Layout>
-          <ProjectSummary post={post}> </ProjectSummary>
-          <hr></hr>
-          <MarkdownLayout>
-            <SEO postPath={slug} postNode={postNode} postSEO />
-            <div>
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-              <div className="post-meta">
-                <PostTags tags={post.tags} />
-              </div>
+        <ProjectSummary post={post}> </ProjectSummary>
+        <hr></hr>
+        <MarkdownLayout>
+          <SEO postPath={slug} postNode={postNode} postSEO />
+          <div>
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <div className="post-meta">
+              <PostTags tags={post.tags} />
             </div>
-          </MarkdownLayout>
-        </Layout>
-      </div>
+          </div>
+        </MarkdownLayout>
+      </MainLayout>
     );
   }
 }
