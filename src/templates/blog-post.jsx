@@ -1,13 +1,13 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { graphql } from "gatsby";
+
+import Helmet from "react-helmet";
+
 import Layout from "../layout/layout";
-import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
-import Footer from "../components/Footer/Footer";
+import Disqus from "../components/Disqus";
+import PostTags from "../components/PostTags";
+import SocialLinks from "../components/SocialLinks";
+import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
@@ -23,10 +23,10 @@ export default class BlogPostTemplate extends React.Component {
     }
 
     return (
+      <div>
       <Layout>
         <div>
           <Helmet>
-            <h1> FUCK </h1>
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
@@ -35,12 +35,11 @@ export default class BlogPostTemplate extends React.Component {
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <div className="post-meta">
               <PostTags tags={post.tags} />
-              <SocialLinks postPath={slug} postNode={postNode} />
             </div>
-            <Disqus postNode={postNode} />
           </div>
         </div>
       </Layout>
+      </div>
     );
   }
 }

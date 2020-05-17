@@ -1,20 +1,16 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { graphql } from "gatsby";
-import Layout from "../layout/layout";
-import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
-import ProjectSummary from "../components/ProjectSummary";
-import Footer from "../components/Footer/Footer";
-import config from "../../data/SiteConfig";
-import Header from "../layout/header";
-import "./b16-tomorrow-dark.css";
-import "./post.css";
+
+import Helmet from "react-helmet";
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
+
+import Layout from "../layout/layout";
+import Header from "../layout/header";
+import PostTags from "../components/PostTags";
+import SEO from "../components/SEO";
+import ProjectSummary from "../components/ProjectSummary";
+import config from "../../data/SiteConfig";
 
 
 const MarkdownLayout = styled.div`
@@ -36,24 +32,25 @@ export default class ProjectPostTemplate extends React.Component {
     }
 
     return (
-      <Layout>
-        <Header>
-        <Helmet>
+      <div>
+       <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
-        <ProjectSummary post={post}> </ProjectSummary>
-        <hr></hr>
-        <MarkdownLayout>
-          <SEO postPath={slug} postNode={postNode} postSEO />
-          <div>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <div className="post-meta">
-              <PostTags tags={post.tags} />
+        <Header> </Header>
+        <Layout>
+          <ProjectSummary post={post}> </ProjectSummary>
+          <hr></hr>
+          <MarkdownLayout>
+            <SEO postPath={slug} postNode={postNode} postSEO />
+            <div>
+              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+              <div className="post-meta">
+                <PostTags tags={post.tags} />
+              </div>
             </div>
-          </div>
-        </MarkdownLayout>
-        </Header>
-      </Layout>
+          </MarkdownLayout>
+        </Layout>
+      </div>
     );
   }
 }

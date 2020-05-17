@@ -6,7 +6,7 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { rhythm, scale } from "../utils/typography"
 
-import PostTags from "./PostTags/PostTags";
+import PostTags from "./PostTags";
 import "../layout/layout.css";
 import GitHubButton from "../../node_modules/react-github-btn/index";
 

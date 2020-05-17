@@ -1,8 +1,10 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { graphql } from "gatsby";
+
+import Helmet from "react-helmet";
+
 import Layout from "../layout/layout";
-import ProjectListing from "../components/ProjectListing/ProjectListing";
+import ProjectListing from "../components/ProjectListing";
 import config from "../../data/SiteConfig";
 import Header from "../layout/header";
 
@@ -11,14 +13,16 @@ export default class TagTemplate extends React.Component {
     const { tag } = this.props.pageContext;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <Layout>
-        <Header>
-        <div className="tag-container">
-          <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
-          <ProjectListing postEdges={postEdges} />
-        </div>
-        </Header>
-      </Layout>
+      <div>
+        <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
+        <Header></Header>
+        <Layout>
+          <div className="tag-container">
+            <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
+            <ProjectListing postEdges={postEdges} />
+          </div>
+        </Layout>
+      </div>
     );
   }
 }

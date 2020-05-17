@@ -10,6 +10,21 @@ import darkicon from '../../static/dark.svg'
 import "./layout.css";
 
 //CSS
+
+const HeaderTitleCSS = styled.div`
+margin-right: auto;
+h3
+{
+&:hover {
+  color: var(--textHighlight);
+}
+@media (max-width: 550px)
+{
+  display: none;
+  visibility: hidden;
+}
+`
+
 const HeaderLink = styled(Link)`
   padding-left: ${rhythm(1.5)}; 
   color: var(--textTitle);
@@ -38,34 +53,42 @@ img {
 `
 
 export default class Header extends React.Component {
+  state = {
+    showHeaderScroll: false,
+    prevScrollpos: 0,
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.navOnScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.navOnScroll)
+  }
+
+  navOnScroll = () => {
+    var currentScrollPos = window.pageYOffset;
+    if (this.state.prevScrollpos > currentScrollPos) {
+      this.setState({ showHeaderScroll: true })
+    } else {
+      this.setState({ showHeaderScroll: false })
+    }
+    this.setState({ prevScrollpos: currentScrollPos })
+  }
+
   render(){
+    const { showHeaderScroll } = this.state
     const { children } = this.props;
   return (
-    <div
-      css={css`
-        padding-top: ${rhythm(1.5)};
-        padding-bottom: ${rhythm(1.5)};
-      `}
-    >
-      <div css={css`display: flex; justify-content:flex-end`}>
-        <div css={css`
-                margin-right: auto;
-                h3
-                {
-                &:hover {
-                  color: var(--textHighlight);
-                }
-                @media (max-width: 550px)
-                {
-                  display: none;
-                  visibility: hidden;
-                }`}>
+    <div className='header' css={showHeaderScroll ? css`top: 0` : css`top: -82px`}>
+      <div css= {css`display: flex; justify-content:flex-end;`}>
+        <HeaderTitleCSS>
           <Link to={`/`}>
             <h3>
             {config.siteTitleShort}
             </h3>
           </Link>
-        </div>
+        </HeaderTitleCSS>
         <div css={css`display: flex; justify-content:flex-end;`}>
           <HeaderLink to={`/about/`}>
             About
@@ -93,7 +116,6 @@ export default class Header extends React.Component {
         </div>
       </div>
       <hr css={css``}></hr>
-      {children}
     </div>
   )
   }

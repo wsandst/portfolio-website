@@ -1,22 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
+import { graphql } from "gatsby";
+
 import Helmet from "react-helmet";
+
 import Layout from "../layout/layout";
 import Header from "../layout/header";
+import ProjectListing from "../components/ProjectListing";
 import config from "../../data/SiteConfig";
-import ProjectListing from "../components/ProjectListing/ProjectListing";
 
-class ProjectsPage extends Component {
+class ProjectsPage extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <Layout>
+      <div>
         <Helmet title={`Projects | ${config.siteTitle}`} />
         <Header>
-        <div className="projects-container">
-          <ProjectListing postEdges={postEdges} />
-        </div>
         </Header>
-      </Layout>
+        <Layout>
+          <div className="projects-container">
+            <ProjectListing postEdges={postEdges} />
+          </div>
+        </Layout>
+      </div>
     );
   }
 }

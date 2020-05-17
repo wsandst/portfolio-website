@@ -4,8 +4,8 @@ import Img from "gatsby-image"
 
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-import { rhythm, scale } from "../../utils/typography"
-import "../../layout/layout.css";
+import { rhythm, scale } from "../utils/typography"
+import "../layout/layout.css";
 
 const ProjectBoxCSS = styled.div`
 border-radius: 3px; 

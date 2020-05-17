@@ -4,8 +4,8 @@ import { Link } from "gatsby";
 
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
-import { rhythm } from "../../utils/typography"
-import "../../layout/layout.css";
+import { rhythm } from "../utils/typography"
+import "../layout/layout.css";
 
 /*a {
   display: inline-block;

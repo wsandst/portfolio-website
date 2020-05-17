@@ -1,8 +1,10 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { graphql } from "gatsby";
+
+import Helmet from "react-helmet";
+
 import Layout from "../layout/layout";
-import ProjectListing from "../components/ProjectListing/ProjectListing";
+import ProjectListing from "../components/ProjectListing";
 import config from "../../data/SiteConfig";
 
 export default class CategoryTemplate extends React.Component {

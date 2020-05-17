@@ -10,7 +10,7 @@ body {
   --bg: white;
   --bgup1: white;
   --button: #F2F2F2;
-  --buttondown: rgb(212, 212, 212);
+  --buttondown: rgb(230, 230, 230);
   --textNormal: #333;
   --textTitle: #1A1A1A;
   --textHighlight: #666666;
@@ -46,14 +46,34 @@ body {
   min-width: 100%;
 }
 
+.layout-container {
+  max-width: 1450px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+.header
+{
+  z-index: 1;
+  max-width: 1450px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  top: 0;
+  background-color: var(--bg);
+  will-change: transform;
+  transition: all .3s ease;
+  height: 82px;
+  position: sticky;
+}
+
 #___gatsby #gatsby-focus-wrapper {
   min-height: 100vh;
   min-width: 100vw;
-}
-
-.layout-container {
-  max-width: 1450px;
-  padding: 0 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
 }
