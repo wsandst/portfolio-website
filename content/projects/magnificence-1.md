@@ -1,11 +1,15 @@
 ---
-title: "Not a pinned project"
-cover: "./test5.jpg"
+title: "Magnificence 1"
+cover: "./magnificence-1-cover.jpg"
 category: "something"
 date: "2017-04-02"
-description: "A test project"
-aim: "The aim of this project was to improve on the foundations laid by Magnificence 1 and allow for future testing with various machine learning technologies."
-github: "https://github.com/Latiang/magnificence-2-chess"
+tags:
+    - c++
+    - chess
+    - games
+description: "A UCI Chess Engine with an estimated ELO of 2000. This was my first larger C++ project made back in 2017. It uses an Alpha Beta Search with transposition tables and various other optimizations. The Board representation a state of the art Bitboard with a move generation speed similar to Stockfish."
+aim: "The aim of this project was to implement a functional UCI Chess Engine using Bitboards as well as collaborate together with Harald Bjurulf on our first larger C++ project."
+github: "https://github.com/wsandst/magnificence-chess"
 ---
 
 # Eram mora tuas in inter ferens caterva

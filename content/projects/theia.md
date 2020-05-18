@@ -1,13 +1,16 @@
 ---
-title: "Theia, a software renderer"
-cover: "./test3.jpg"
-date: "2017-03-01"
+title: "Theia, a software rasterizer"
+cover: "./theia-cover.jpg"
+date: "2019-01-01"
 category: "tech"
 tags:
+    - c++
+    - rendering
+    - rasterizing
+    - SDL2
     - pinned
-    - tag
-description: "A test project"
-aim: "The aim of this project was to improve on the foundations laid by Magnificence 1 and allow for future testing with various machine learning technologies."
+description: "A Software Rasterizer implemented in C++ using Eigen and SDL2. It supports a shader pipeline similar to OpenGL. It is real-time with smaller workloads. Eigen is used for fast matrix multiplications. "
+aim: "The aim of this project was to learn about and implement a modern rendering API pipeline in Software, to improve the understanding of the underlying functioning of ex. OpenGL."
 github: "https://github.com/wsandst/theia-software-rasterizer"
 ---
 

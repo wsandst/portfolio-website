@@ -29,6 +29,7 @@ export default class ProjectPostTemplate extends React.Component {
     if (!post.id) {
       post.id = slug;
     }
+    const hasContent = (postNode.html != "");
 
     return (
       <MainLayout>
@@ -36,6 +37,9 @@ export default class ProjectPostTemplate extends React.Component {
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <ProjectSummary post={post}> </ProjectSummary>
+        <div css={hasContent ? css`` : css`margin-bottom: 6rem;
+           @media (max-width: 750px) { margin-bottom: 0}`}>
+        <div css={hasContent ? css`` : css`display:none;`}>
         <hr></hr>
         <MarkdownLayout>
           <SEO postPath={slug} postNode={postNode} postSEO />
@@ -46,6 +50,8 @@ export default class ProjectPostTemplate extends React.Component {
             </div>
           </div>
         </MarkdownLayout>
+        </div>
+        </div>
       </MainLayout>
     );
   }

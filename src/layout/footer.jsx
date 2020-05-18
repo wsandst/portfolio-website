@@ -36,14 +36,14 @@ class Footer extends Component {
             <FooterLink to={`/about/`}>
               Contact
             </FooterLink>
-            <span css={css`color: var(--textTitle); font-size: 75%; margin-left: auto; padding-right: ${rhythm(1.5)}; margin-top: auto; margin-bottom: auto;`}>
+            <span css={css`color: var(--textTitle); font-size: 75%; margin-left: auto; padding-right: ${rhythm(1)}; margin-top: auto; margin-bottom: auto;`}>
               Copyright {year}
             </span>
             <a href="https://github.com/wsandst" title="wsandst's Github">
               <img css={css`margin-top: auto; margin-bottom: auto;`} src={githubDarkIcon} alt="Github" />
             </a>
             <a href="https://www.gatsbyjs.org/" title="Built with Gatsby">
-              <img css={css`margin-top: auto; margin-bottom: auto;`}  src={gatsbyDarkIcon} alt="Gatsby" />
+              <img css={css`margin-top: auto; margin-bottom: auto; margin-left: ${rhythm(0.5)}; margin-right: ${rhythm(0.5)};`} src={gatsbyDarkIcon} alt="Gatsby" />
             </a>
         </div>
       </footer>
