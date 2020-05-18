@@ -1,6 +1,10 @@
 import React from "react";
+import Img from "gatsby-image"
+import { Link } from "gatsby"
 
+import { rhythm, scale } from "../utils/typography"
 import { css } from "@emotion/core"
+
 
 class ProjectListing extends React.Component {
   getPostList() {
@@ -10,6 +14,7 @@ class ProjectListing extends React.Component {
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
         title: postEdge.node.frontmatter.title,
+        cover: postEdge.node.frontmatter.cover,
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead
@@ -19,17 +24,25 @@ class ProjectListing extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const postList = this.getPostList();
-    console.log(postList);
     return (
-      <div css={css`display: flex; justify-content: center; flex-wrap: wrap; flex-direction: column`}>
-        {
-        postList.map(post => (
-          <div>
-            <h2> {post.title} </h2>
-          </div>
-        ))}
+      <div css={css`max-width: 800px; padding: 0 1.5rem; margin-left: auto; margin-right: auto;`}>
+        <div css={css`display: flex; justify-content: center; flex-wrap: wrap; flex-direction: column;`}>
+          {
+          postList.map(post => (
+            <div>
+            <Link to={post.path} key={post.title}>
+              <div css={css`display: flex; flex-direction: row; color: var(--textTitle);`}>
+                  <Img fixed={post.cover.childImageSharp.fixed}
+                  alt="blog-icon"
+                  css={css`margin-top: auto;`}/>
+                  <h4 css={css`margin-bottom: auto; margin-top: auto; margin-left: ${rhythm(0.2)}`}> {post.title} </h4>
+              </div>
+            </Link>
+            <hr css={css`margin-bottom: ${rhythm(0.5)};`}></hr>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

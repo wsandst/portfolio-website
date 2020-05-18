@@ -1,11 +1,11 @@
 ---
-title: "Test blog post 2"
-cover: "./placeholder.jpg"
+title: "Why, contrary to popular belief, the cake is not a lie"
+cover: "./placeholder.png"
 category: "tech"
 date: "2020-02-17"
 tags:
-    - c++
-    - rfun
+    - unique2
+    - blog
 
 description: "Blog test summary. Should be sort"
 aim: "hmm"

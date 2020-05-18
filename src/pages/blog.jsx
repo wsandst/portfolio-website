@@ -39,7 +39,7 @@ query BlogQuery {
           tags
           cover {
             childImageSharp {
-            fixed(width: 274, height: 365, quality:90) {
+            fixed(width: 50, height: 50, quality:90) {
               ...GatsbyImageSharpFixed
                 }
             }

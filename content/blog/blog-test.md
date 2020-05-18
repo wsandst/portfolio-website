@@ -1,11 +1,11 @@
 ---
-title: "Test blog post"
-cover: "./placeholder.jpg"
+title: "The art of proper tea drinking"
+cover: "./placeholder.png"
 category: "tech"
 date: "2020-02-17"
 tags:
-    - c++
-    - rfun
+    - unique
+    - blog2
 
 description: "Blog test summary. Should be sort"
 aim: "hmm"

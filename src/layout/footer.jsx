@@ -28,7 +28,6 @@ const FooterLink = styled(Link)`
 class Footer extends Component {
   render() {
     const year = new Date().getFullYear()
-
     return (
       <footer className="footer">
         <hr css={css``}></hr>
@@ -40,10 +39,12 @@ class Footer extends Component {
               Copyright {year}
             </span>
             <a href="https://github.com/wsandst" title="wsandst's Github">
-              <img css={css`margin-top: auto; margin-bottom: auto;`} src={githubDarkIcon} alt="Github" />
+              <img className="light-icon" src={githubDarkIcon} alt="Github" />
+              <img className="dark-icon" src={githubLightIcon} alt="Github" />
             </a>
             <a href="https://www.gatsbyjs.org/" title="Built with Gatsby">
-              <img css={css`margin-top: auto; margin-bottom: auto; margin-left: ${rhythm(0.5)}; margin-right: ${rhythm(0.5)};`} src={gatsbyDarkIcon} alt="Gatsby" />
+              <img className="light-icon" src={gatsbyDarkIcon} alt="Github" css={css`margin-left: ${rhythm(0.5)}; margin-right: ${rhythm(0.5)};`}/>
+              <img className="dark-icon" src={gatsbyLightIcon} alt="Github" css={css`margin-left: ${rhythm(0.5)}; margin-right: ${rhythm(0.5)};`}/>
             </a>
         </div>
       </footer>

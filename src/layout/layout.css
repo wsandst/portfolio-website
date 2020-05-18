@@ -86,3 +86,23 @@ body {
   max-width: 1450px;
   
 }
+
+.dark-icon
+{
+  margin-top: auto; margin-bottom: auto;
+}
+
+.light-icon
+{
+  margin-top: auto; margin-bottom: auto;
+}
+
+body.dark .dark-icon
+{
+  display: none;
+}
+
+body.light .light-icon
+{
+  display: none;
+}
