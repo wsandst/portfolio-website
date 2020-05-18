@@ -3,15 +3,17 @@ import React from "react";
 import Helmet from "react-helmet";
 
 import MainLayout from "../layout/layout";
+import BlogListing from "../components/BlogListing";
 import config from "../../data/SiteConfig";
 
 class BlogPage extends React.Component {
   render() {
+    const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <MainLayout>
       <Helmet title={`Blog | ${config.siteTitle}`} />
       <div className="blog-container">
-        Blog
+        <BlogListing postEdges={postEdges}/>
       </div>
       </MainLayout>
     );
@@ -19,3 +21,33 @@ class BlogPage extends React.Component {
 }
 
 export default BlogPage;
+
+export const blogPageQuery = graphql`
+query BlogQuery {
+  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(blog)/"  }}, sort: { fields: [fields___date], order: DESC })
+  {
+    edges {
+      node {
+        fields {
+          slug
+          date
+        }
+        excerpt
+        timeToRead
+        frontmatter {
+          title
+          tags
+          cover {
+            childImageSharp {
+            fixed(width: 274, height: 365, quality:90) {
+              ...GatsbyImageSharpFixed
+                }
+            }
+          }
+          date
+        }
+      }
+    }
+  }
+}
+`;

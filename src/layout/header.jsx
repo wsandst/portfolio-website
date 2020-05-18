@@ -15,12 +15,27 @@ import "./layout.css";
 
 const HeaderTitleCSS = styled.div`
 margin-right: auto;
+@media (max-width: 550px)
+{
+  display: none;
+  visibility: hidden;
+}
 h3
 {
 &:hover {
   color: var(--textHighlight);
 }
-@media (max-width: 550px)
+}
+`
+
+const HeaderTitleMobileCSS = styled.div`
+margin-right: auto;
+h3
+{
+&:hover {
+  color: var(--textHighlight);
+}
+@media (min-width: 550px)
 {
   display: none;
   visibility: hidden;
@@ -33,11 +48,27 @@ const HeaderLink = styled(Link)`
   &:hover {
     color: var(--textHighlight);
   }
+  @media (max-width: 550px)
+  {
+    padding-left: ${rhythm(1)}; 
+  }
+  @media (max-width: 390px)
+  {
+    padding-left: ${rhythm(0.7)}; 
+  }
   `
 
 const DarkModeToggleButtonCSS = styled.div
 `
 padding-left: ${rhythm(1.5)}; 
+@media (max-width: 550px)
+{
+  padding-left: ${rhythm(1)}; 
+}
+@media (max-width: 390px)
+{
+  padding-left: ${rhythm(0.7)}; 
+}
 button {
   -webkit-appearance: none;
   border: 0;
@@ -50,6 +81,7 @@ img {
   height: 25px;
   width: 25px;
   min-width: 25px;
+  padding: 0;
 }
 }
 `
@@ -91,6 +123,15 @@ export default class Header extends React.Component {
             </h3>
           </Link>
         </HeaderTitleCSS>
+
+        <HeaderTitleMobileCSS>
+          <Link to={`/`}>
+            <h3>
+            WS
+            </h3>
+          </Link>
+        </HeaderTitleMobileCSS>
+        
         <div css={css`display: flex; justify-content:flex-end;`}>
           <HeaderLink to={`/about/`}>
             About
@@ -99,7 +140,7 @@ export default class Header extends React.Component {
             Projects
           </HeaderLink>
           <HeaderLink to={`/blog/`}>
-            Blog
+            Articles
           </HeaderLink>
           <DarkModeToggleButtonCSS>
             <ThemeToggler>

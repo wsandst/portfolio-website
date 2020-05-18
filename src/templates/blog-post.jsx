@@ -2,16 +2,22 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Helmet from "react-helmet";
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 
-import Layout from "../layout/layout";
-import Disqus from "../components/Disqus";
+import MainLayout from "../layout/layout";
 import PostTags from "../components/PostTags";
-import SocialLinks from "../components/SocialLinks";
 import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
-import "./b16-tomorrow-dark.css";
-import "./post.css";
-import MainLayout from "../layout/layout";
+
+
+const MarkdownLayout = styled.div`
+    max-width: 800px;
+    padding: 0 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  `
 
 export default class BlogPostTemplate extends React.Component {
   render() {
@@ -22,27 +28,29 @@ export default class BlogPostTemplate extends React.Component {
     if (!post.id) {
       post.id = slug;
     }
+    const hasContent = (postNode.html != "");
 
     return (
       <MainLayout>
-        <Helmet>
+       <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
-        <div>
-          <h1>{post.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <div className="post-meta">
-            <PostTags tags={post.tags} />
+        <MarkdownLayout>
+          <SEO postPath={slug} postNode={postNode} postSEO />
+          <div>
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <div className="post-meta">
+              <PostTags tags={post.tags} />
+            </div>
           </div>
-        </div>
+        </MarkdownLayout>
       </MainLayout>
     );
   }
 }
 
 /* eslint no-undef: "off" */
-export const pageQuery = graphql`
+export const blogPageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
@@ -52,7 +60,7 @@ export const pageQuery = graphql`
         title
         cover {
           childImageSharp {
-          fixed(width: 125, height: 125) {
+            fixed(width: 372, height: 494, quality:90) {
             ...GatsbyImageSharpFixed
               }
           }
@@ -60,6 +68,9 @@ export const pageQuery = graphql`
         date
         category
         tags
+        description
+        aim
+        github
       }
       fields {
         slug
@@ -68,4 +79,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
