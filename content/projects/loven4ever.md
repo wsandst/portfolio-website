@@ -1,17 +1,16 @@
 ---
-title: "Theia, a software rasterizer"
-cover: "./theia-cover.jpg"
-date: "2018-12-01"
+title: "Migrating the Wordpress blog Löven4ever"
+cover: "./loven4ever-cover.jpg"
+date: "2019-09-01"
 category: "tech"
 tags:
-    - c++
-    - rendering
-    - rasterizing
-    - SDL2
-    - pinned
-description: "A Software Rasterizer implemented in C++ using Eigen and SDL2. It supports a shader pipeline similar to OpenGL. It is real-time with smaller workloads. Eigen is used for fast matrix multiplications. "
-aim: "The aim of this project was to learn about and implement a modern rendering API pipeline in Software, to improve the understanding of the underlying functioning of ex. OpenGL."
-github: "https://github.com/wsandst/theia-software-rasterizer"
+    - wordpress
+    - web-dev
+    - website
+    - migration
+description: "I migrated the 12 year old Wordpress blog www.loven4ever.com to a Raspberry Pi, fixed various issues and optimized the website down from 8 second loading time to 2 second loading time."
+aim: "To migrate the website and fix various problems."
+github: ""
 ---
 
 # Domos primus caelum taedia

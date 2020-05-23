@@ -1,17 +1,16 @@
 ---
-title: "Theia, a software rasterizer"
-cover: "./theia-cover.jpg"
-date: "2018-12-01"
+title: "Gatsby Portfolio Website"
+cover: "./portfolio-cover.jpg"
+date: "2020-04-20"
 category: "tech"
 tags:
-    - c++
-    - rendering
-    - rasterizing
-    - SDL2
-    - pinned
-description: "A Software Rasterizer implemented in C++ using Eigen and SDL2. It supports a shader pipeline similar to OpenGL. It is real-time with smaller workloads. Eigen is used for fast matrix multiplications. "
-aim: "The aim of this project was to learn about and implement a modern rendering API pipeline in Software, to improve the understanding of the underlying functioning of ex. OpenGL."
-github: "https://github.com/wsandst/theia-software-rasterizer"
+    - gatsby
+    - react
+    - web-dev
+    - website
+description: "A personal portfolio website made using Gatsby and React. You are currently viewing the website. "
+aim: "The aim of this project make a portfolio website for myself and learn about Gatsby (using React), a modern website framework"
+github: "https://github.com/wsandst/portfolio-website"
 ---
 
 # Domos primus caelum taedia

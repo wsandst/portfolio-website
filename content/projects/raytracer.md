@@ -2,7 +2,7 @@
 title: "Real-time GPU Raytracer"
 cover: "./raytracer-cover.jpg"
 category: "tech"
-date: "2020-02-17"
+date: "2020-01-17"
 tags:
     - c++
     - rendering

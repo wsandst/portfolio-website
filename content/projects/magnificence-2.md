@@ -1,7 +1,7 @@
 ---
 title: "Magnificence 2, a modern UCI Chess Engine"
 cover: "./magnificence-2-cover.jpg"
-date: "2020-04-01"
+date: "2020-04-05"
 category: "tech"
 tags:
     - c++

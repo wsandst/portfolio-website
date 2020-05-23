@@ -1,17 +1,16 @@
 ---
-title: "Theia, a software rasterizer"
-cover: "./theia-cover.jpg"
-date: "2018-12-01"
+title: "Experimental Voxel Engine"
+cover: "./voxels-cover.jpg"
+date: "2019-01-01"
 category: "tech"
 tags:
     - c++
+    - voxels
     - rendering
-    - rasterizing
     - SDL2
-    - pinned
-description: "A Software Rasterizer implemented in C++ using Eigen and SDL2. It supports a shader pipeline similar to OpenGL. It is real-time with smaller workloads. Eigen is used for fast matrix multiplications. "
-aim: "The aim of this project was to learn about and implement a modern rendering API pipeline in Software, to improve the understanding of the underlying functioning of ex. OpenGL."
-github: "https://github.com/wsandst/theia-software-rasterizer"
+description: "An Experimental Voxel Engine made using OpenGL in C++. It renders traditional voxel terrain using cubic chunks using greedy meshing. It supports textures, mesh-wise AO, simple light and dynamic block models"
+aim: "The aim of this project was to learn about and implement a simple voxel engine, inspired by Minecraft"
+github: ""
 ---
 
 # Domos primus caelum taedia

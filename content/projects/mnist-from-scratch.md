@@ -1,17 +1,17 @@
 ---
-title: "Theia, a software rasterizer"
-cover: "./theia-cover.jpg"
-date: "2018-12-01"
+title: "Recognizing handwritten digits using Machine Learning"
+cover: "./mnist-from-scratch-cover.jpg"
+date: "2020-04-01"
 category: "tech"
 tags:
-    - c++
-    - rendering
-    - rasterizing
-    - SDL2
-    - pinned
-description: "A Software Rasterizer implemented in C++ using Eigen and SDL2. It supports a shader pipeline similar to OpenGL. It is real-time with smaller workloads. Eigen is used for fast matrix multiplications. "
-aim: "The aim of this project was to learn about and implement a modern rendering API pipeline in Software, to improve the understanding of the underlying functioning of ex. OpenGL."
-github: "https://github.com/wsandst/theia-software-rasterizer"
+    - python
+    - machine-learning
+    - numpy
+    - QT5
+    - MNIST
+description: "A Machine Learning project to recognize handwritten digits from the MNIST dataset with a 97 % accuracy. Written in Python using Numpy, completely from the ground up (no TensorFlow etc). Uses PyQT5 for a visual interface"
+aim: "The aim of this project was implement a neural network from scratch to learn about machine learning. It also served as a learning oppertunity for the GUI framework PyQT5"
+github: "https://github.com/Latiang/hand-writing-recognition"
 ---
 
 # Domos primus caelum taedia

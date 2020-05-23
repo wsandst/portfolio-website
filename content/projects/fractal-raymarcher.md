@@ -1,17 +1,16 @@
 ---
-title: "Theia, a software rasterizer"
-cover: "./theia-cover.jpg"
-date: "2018-12-01"
+title: "Fractal Raymarcher"
+cover: "./fractal-raymarcher-cover.jpg"
+date: "2020-02-01"
 category: "tech"
 tags:
     - c++
     - rendering
-    - rasterizing
+    - raymarching
     - SDL2
-    - pinned
-description: "A Software Rasterizer implemented in C++ using Eigen and SDL2. It supports a shader pipeline similar to OpenGL. It is real-time with smaller workloads. Eigen is used for fast matrix multiplications. "
-aim: "The aim of this project was to learn about and implement a modern rendering API pipeline in Software, to improve the understanding of the underlying functioning of ex. OpenGL."
-github: "https://github.com/wsandst/theia-software-rasterizer"
+description: "A simple GPU Raymarcher designed in particular for 3D fractals. Developed using OpenGL Compute Shaders and C++. "
+aim: "The aim of this project was to learn about raymarching and work with OpenGL Compute Shaders"
+github: "https://github.com/wsandst/fractal-raymarcher"
 ---
 
 # Domos primus caelum taedia
