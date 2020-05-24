@@ -84,6 +84,7 @@ export const pageQuery = graphql`
         description
         aim
         github
+        authors
       }
       fields {
         slug

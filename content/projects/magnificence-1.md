@@ -10,6 +10,7 @@ tags:
 description: "A UCI Chess Engine with an estimated ELO of 2000. This was my first larger C++ project made back in 2017. It uses an Alpha Beta Search with transposition tables and various other optimizations. The Board representation a state of the art Bitboard with a move generation speed similar to Stockfish."
 aim: "The aim of this project was to implement a functional UCI Chess Engine using Bitboards as well as collaborate together with Harald Bjurulf on our first larger C++ project."
 github: "https://github.com/wsandst/magnificence-chess"
+authors: "William Sandström and Harald Bjurulf"
 ---
 
 # Eram mora tuas in inter ferens caterva

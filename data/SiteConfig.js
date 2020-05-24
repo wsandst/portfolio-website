@@ -1,18 +1,18 @@
 const config = {
-  siteTitle: "WSAND Portfolio Website", // Site title.
+  siteTitle: "WSANDST Portfolio", // Site title.
   siteTitleShort: "WSANDST", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "WSAND Programming", // Alternative site title for SEO.
+  siteTitleAlt: "WSANDST Programming", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://gatsby-advanced-starter-demo.netlify.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "A Portfolio Website showcasing various Projects", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "A Portfolio Website showcasing various projects", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteRssTitle: "WSAND Project Feed", // Title of the RSS feed
+  siteRssTitle: "WSANDST Project Feed", // Title of the RSS feed
   siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
   disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
-  dateFormat: "DD/MM/YYYY", // Date format for display.
+  dateFormat: "MMMM Do, YYYY", // Date format for display.
   postsPerPage: 4, // Amount of posts displayed per listing page.
   userName: "Advanced User", // Username to display in the author segment.
   userEmail: "AdvancedUser@example.com", // Email used for RSS feed's author segment

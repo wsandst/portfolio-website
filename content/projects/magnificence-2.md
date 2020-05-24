@@ -12,6 +12,7 @@ tags:
 description: "A modern UCI Chess Engine implemented in C++. It has an estimated ELO rating of ~2000 ELO."
 aim: "The aim of this project was to experiment with various machine learning techniques in relation to game tree search. It was also to improve on the general chess engine foundations laid by Magnificence 1."
 github: "https://github.com/Latiang/magnificence-2-chess"
+authors: "William Sandström and Harald Bjurulf"
 ---
 
 # Quanto et ius coniunctis urbes

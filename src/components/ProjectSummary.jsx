@@ -9,12 +9,13 @@ import GitHubButton from "../../node_modules/react-github-btn/index";
 
 import PostTags from "./PostTags";
 import "../layout/layout.css";
-
+import { formatDate } from '../utils/global'
 
 class ProjectSummary extends React.Component {  
     render() {
     const post = this.props.post;
-    console.log(post);
+    const date = formatDate(post.date)
+    const authorSnippet = (post.authors == "") ? date : (post.authors + "   |  " + date)
     return (
         <div css={css`max-width: 1000px; margin-top: ${rhythm(1.5)}; margin-bottom: ${rhythm(1.5)}; margin-left: auto; margin-right: auto; `}>
         <div css={css`display: flex; justify-content: center; flex-direction: row;
@@ -28,11 +29,14 @@ class ProjectSummary extends React.Component {
                     <h3 css={css`margin-bottom: ${rhythm(0.2)}`}> Aim </h3>
                     <span> {post.aim} </span>
                 </div>
-                <div css={css`margin-top: ${rhythm(0.7)}; margin-bottom: ${rhythm(0.4)}`} >
-                    <PostTags tags={post.tags} />
-                </div>
-                <div>
+                <div css={css`margin-top:${rhythm(0.7)}; margin-bottom: ${rhythm(0.2)};`}>
                     <GitHubButton href={post.github} data-size="large"> View Code</GitHubButton>
+                </div>
+                <div css={css``}>
+                  <span css={css`color: var(--textNormal); font-size: 80%;`}> {authorSnippet} </span>
+                </div>
+                <div css={css`margin-top: ${rhythm(0.5)};`} >
+                    <PostTags tags={post.tags} />
                 </div>
             </div>
         </div>

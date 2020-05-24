@@ -6,7 +6,7 @@ import { rhythm, scale } from "../utils/typography"
 import { css } from "@emotion/core"
 
 
-class ProjectListing extends React.Component {
+class BlogListing extends React.Component {
   getPostList() {
     const postList = [];
     this.props.postEdges.forEach(postEdge => {
@@ -33,10 +33,13 @@ class ProjectListing extends React.Component {
             <div>
             <Link to={post.path} key={post.title}>
               <div css={css`display: flex; flex-direction: row; color: var(--textTitle);`}>
+                <div>
                   <Img fixed={post.cover.childImageSharp.fixed}
-                  alt="blog-icon"
+                  alt="blog-post-icon"
                   css={css`margin-top: auto;`}/>
-                  <h4 css={css`margin-bottom: auto; margin-top: auto; margin-left: ${rhythm(0.2)}`}> {post.title} </h4>
+                </div>
+                  <h4 css={css`color: var(--textNormal); margin-bottom: auto; margin-top: auto; margin-left: ${rhythm(0.5)};
+                  text-align: left;`}> {post.title} </h4>
               </div>
             </Link>
             <hr css={css`margin-bottom: ${rhythm(0.5)};`}></hr>
@@ -48,4 +51,4 @@ class ProjectListing extends React.Component {
   }
 }
 
-export default ProjectListing;
+export default BlogListing;

@@ -9,6 +9,7 @@ import MainLayout from "../layout/layout";
 import PostTags from "../components/PostTags";
 import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
+import { formatDate } from '../utils/global'
 
 
 const MarkdownLayout = styled.div`
@@ -29,7 +30,7 @@ export default class BlogPostTemplate extends React.Component {
       post.id = slug;
     }
     const hasContent = (postNode.html != "");
-
+    const date = formatDate(post.date)
     return (
       <MainLayout>
        <Helmet>
@@ -37,6 +38,13 @@ export default class BlogPostTemplate extends React.Component {
         </Helmet>
         <MarkdownLayout>
           <SEO postPath={slug} postNode={postNode} postSEO />
+          <h1 css={css``}>
+            {post.title}
+          </h1>
+          <span css={css`color: var(--textNormal); font-size: 85%;`}>
+            {date}
+          </span>
+          <PostTags tags={post.tags} />
           <div>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <div className="post-meta">

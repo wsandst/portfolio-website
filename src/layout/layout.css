@@ -11,6 +11,7 @@ body {
   --bgup1: white;
   --button: #F2F2F2;
   --buttondown: rgb(230, 230, 230);
+  --textLight: #444;
   --textNormal: #333;
   --textTitle: #1A1A1A;
   --textHighlight: #666666;
@@ -31,6 +32,7 @@ body.dark {
   --bgup1: #4A4A4A;
   --button: rgb(87, 87, 87);
   --buttondown: #4A4A4A;
+  --textLight: rgb(151, 151, 151);
   --textNormal: rgba(255, 255, 255, 0.88);
   --textTitle: white;
   --textHighlight: rgba(255, 255, 255, 0.80);
@@ -54,6 +56,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
+  min-height: 90vh;
+  margin-bottom: 150px;
 }
 
 .header
@@ -78,13 +82,12 @@ body {
   max-width: 1450px;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  padding-top: 1.5rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  max-width: 1450px;
-  
+  clear: both;
+  position: relative;
+  height: 90px;
+  margin-top: -90px;
 }
 
 .dark-icon
@@ -105,4 +108,16 @@ body.dark .dark-icon
 body.light .light-icon
 {
   display: none;
+}
+
+#___gatsby
+{
+  height: 100vh;
+  min-height: 100vh;
+}
+
+#gatsby-focus-wrapper
+{
+  height: 100vh;
+  min-height: 100vh;
 }
