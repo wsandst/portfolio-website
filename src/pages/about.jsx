@@ -14,7 +14,7 @@ class AboutPage extends React.Component {
     return (
       <MainLayout>
         <Helmet title={`About | ${config.siteTitle}`} />
-        <div css={css`max-width: 850px; margin-top: ${rhythm(1.5)}; margin-bottom: ${rhythm(1.5)}; margin-left: auto; margin-right: auto; display: flex; flex-direction: column;`}>
+        <div css={css`max-width: 850px; margin-top: ${rhythm(1.5)}; margin-bottom: ${rhythm(6)}; margin-left: auto; margin-right: auto; display: flex; flex-direction: column;`}>
           <div css={css`display: flex; flex-direction: row; 
           @media (max-width: 920px) { flex-direction: column;}`}>
             <div css={css`min-width: 200px; display: flex; justify-content: center; margin-bottom: ${rhythm(1)};`}>

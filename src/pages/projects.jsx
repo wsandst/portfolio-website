@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Helmet from "react-helmet";
+import { css } from "@emotion/core"
 
 import MainLayout from "../layout/layout";
 import ProjectListing from "../components/ProjectListing";
@@ -13,7 +14,7 @@ class ProjectsPage extends React.Component {
     return (
       <MainLayout>
         <Helmet title={`Projects | ${config.siteTitle}`} />
-        <div className="projects-container">
+        <div css={css`margin-bottom: 7rem;`} className="projects-container">
           <ProjectListing postEdges={postEdges} />
         </div>
       </MainLayout>

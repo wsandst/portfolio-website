@@ -65,7 +65,7 @@ class ProjectCoverSimple extends React.Component {
     render() {
       const post = this.props.post
       return (
-        <div css={css`margin: ${rhythm(0.6)}; margin-top: 0; flex-grow: 1; `}>
+        <div css={css`margin: ${rhythm(0.6)}; margin-top: auto; margin-bottom: auto; flex-grow: 1; `}>
             <ProjectBoxCSS>
               <Img
               className="project-cover"
