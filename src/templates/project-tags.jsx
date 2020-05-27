@@ -15,7 +15,7 @@ export default class ProjectTagTemplate extends React.Component {
     return (
       <MainLayout>
         <Helmet title={`Projects tagged as "${tag}" | ${config.siteTitle}`} />
-        <div className="tag-container">
+        <div className="tag-container" css={css`margin-bottom: 7rem;`}>
           <h1 css={css`text-align: center; margin-top: 1rem;`}>Projects tagged as <u>{tag}</u></h1>
           <ProjectListing postEdges={postEdges} />
         </div>
@@ -30,7 +30,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { fileAbsolutePath: {regex: "/(projects)/"  }, frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
       edges {

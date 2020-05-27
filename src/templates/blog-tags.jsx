@@ -30,7 +30,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [fields___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { fileAbsolutePath: {regex: "/(blog)/"  }, frontmatter: { tags: { in: [$tag] } } }
     ) {
       totalCount
       edges {

@@ -6,6 +6,7 @@ date: "2020-02-17"
 tags:
     - unique
     - blog2
+    - c++
 
 description: "Blog test summary. Should be sort"
 aim: "hmm"
