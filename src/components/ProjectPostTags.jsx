@@ -48,15 +48,16 @@ a {
 }
 `
 
-class TagContainer extends Component {
+class ProjectTagContainer extends Component {
   render() {
     const tag = this.props.tag;
+    const toPath = (tag.tagType )
     return (
       <TagContainerCSS>
         <Link
               key={tag}
               style={{ textDecoration: "none" }}
-              to={`/tags/${_.kebabCase(tag)}`}
+              to={`/project-tags/${_.kebabCase(tag)}`}
             >
               {tag}
           </Link>
@@ -66,19 +67,19 @@ class TagContainer extends Component {
 }
 
 // Component for listing the tags of a project/blog post
-class PostTags extends Component {
+class ProjectPostTags extends Component {
   render() {
     const { tags } = this.props;
     return (
       <div className="post-tag-container">
         {tags &&
           tags.map(tag => (
-            <TagContainer tag={tag}>
-            </TagContainer>
+            <ProjectTagContainer tag={tag}>
+            </ProjectTagContainer>
           ))}
       </div>
     );
   }
 }
 
-export default PostTags;
+export default ProjectPostTags;

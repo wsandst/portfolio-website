@@ -6,7 +6,7 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
 import MainLayout from "../layout/layout";
-import PostTags from "../components/PostTags";
+import PostTags from "../components/ProjectPostTags";
 import SEO from "../components/SEO";
 import ProjectSummary from "../components/ProjectSummary";
 import config from "../../data/SiteConfig";

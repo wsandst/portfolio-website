@@ -43,8 +43,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const blogPostPage = path.resolve("src/templates/blog-post.jsx");
   const projectPostPage = path.resolve("src/templates/project-post.jsx");
-  const tagPage = path.resolve("src/templates/tag.jsx");
-  const categoryPage = path.resolve("src/templates/category.jsx");
+  const blogTagPage = path.resolve("src/templates/blog-tags.jsx");
+  const projectTagPage = path.resolve("src/templates/project-tags.jsx");
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
@@ -87,8 +87,8 @@ exports.createPages = async ({ graphql, actions }) => {
     throw markdownQueryResult.errors;
   }
 
-  const tagSet = new Set();
-  const categorySet = new Set();
+  const projectTagSet = new Set();
+  const blogTagSet = new Set();
 
   const blogPostsEdges = markdownQueryResult.data.blogPosts.edges;
   const projectPostsEdges = markdownQueryResult.data.projectPosts.edges;
@@ -134,13 +134,8 @@ exports.createPages = async ({ graphql, actions }) => {
     // Generate a list of tags
     if (edge.node.frontmatter.tags) {
       edge.node.frontmatter.tags.forEach(tag => {
-        tagSet.add(tag);
+        blogTagSet.add(tag);
       });
-    }
-
-    // Generate a list of categories
-    if (edge.node.frontmatter.category) {
-      categorySet.add(edge.node.frontmatter.category);
     }
 
     createPage({
@@ -156,13 +151,8 @@ exports.createPages = async ({ graphql, actions }) => {
     // Generate a list of tags
     if (edge.node.frontmatter.tags) {
       edge.node.frontmatter.tags.forEach(tag => {
-        tagSet.add(tag);
+        projectTagSet.add(tag);
       });
-    }
-
-    // Generate a list of categories
-    if (edge.node.frontmatter.category) {
-      categorySet.add(edge.node.frontmatter.category);
     }
 
     createPage({
@@ -174,21 +164,20 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
-  //  Create tag pages
-  tagSet.forEach(tag => {
+  // Create tag pages
+  projectTagSet.forEach(tag => {
     createPage({
-      path: `/tags/${_.kebabCase(tag)}/`,
-      component: tagPage,
+      path: `/project-tags/${_.kebabCase(tag)}/`,
+      component: projectTagPage,
       context: { tag }
     });
   });
 
-  // Create category pages
-  categorySet.forEach(category => {
+  blogTagSet.forEach(tag => {
     createPage({
-      path: `/categories/${_.kebabCase(category)}/`,
-      component: categoryPage,
-      context: { category }
+      path: `/blog-tags/${_.kebabCase(tag)}/`,
+      component: blogTagPage,
+      context: { tag }
     });
   });
 };

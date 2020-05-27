@@ -7,7 +7,7 @@ import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import GitHubButton from "../../node_modules/react-github-btn/index";
 
-import PostTags from "./PostTags";
+import PostTags from "./ProjectPostTags";
 import "../layout/layout.css";
 import { formatDate } from '../utils/global'
 

@@ -7,7 +7,7 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
 import MainLayout from "../layout/layout";
-import PostTags from "../components/PostTags";
+import PostTags from "../components/BlogPostTags";
 import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
 import { formatDate } from '../utils/global'
@@ -38,9 +38,9 @@ export default class BlogPostTemplate extends React.Component {
        <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
-        <MarkdownLayout>
           <SEO postPath={slug} postNode={postNode} postSEO />
-            <div css={css`display: flex; flex-direction: row; margin-bottom: 3rem; `}>
+            <div css={css`display: flex; flex-direction: row; margin-bottom: 3rem; 
+            max-width: 800px;padding: 0 1.5rem; margin-left: auto; margin-right: auto; margin-top: 1.5rem;`}>
               <div css={css`display: flex; flex-direction: column; `}>
                 <h1 css={css`margin: 0; padding-right: 2rem; padding-top: 1.5rem;`}>
                   {post.title}
@@ -57,13 +57,12 @@ export default class BlogPostTemplate extends React.Component {
               css={css`border-radius: 3px; min-width: 150px; padding-left: 3rem;`}
               />
           </div>
-          <div>
+          <MarkdownLayout>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <div className="post-meta">
               <PostTags tags={post.tags} />
             </div>
-          </div>
-        </MarkdownLayout>
+          </MarkdownLayout>
       </MainLayout>
     );
   }
