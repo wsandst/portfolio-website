@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
 import { css } from "@emotion/core"
 
+import { formatDate } from '../utils/global'
 
 class BlogListing extends React.Component {
   getPostList() {
@@ -15,7 +16,7 @@ class BlogListing extends React.Component {
         tags: postEdge.node.frontmatter.tags,
         title: postEdge.node.frontmatter.title,
         cover: postEdge.node.frontmatter.cover,
-        date: postEdge.node.fields.date,
+        date: formatDate(postEdge.node.fields.date),
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead
       });
@@ -32,17 +33,21 @@ class BlogListing extends React.Component {
           postList.map(post => (
             <div>
             <Link to={post.path} key={post.title}>
-              <div css={css`display: flex; flex-direction: row; color: var(--textTitle);`}>
-                <div>
+              <div css={css`display: flex; flex-direction: row; color: var(--textTitle); align-items: start;
+              padding-bottom: ${rhythm(0.7)}; padding-top: ${rhythm(0.7)};
+              &:hover { background-color: var(--hover)}`}>
+                <div css={css`margin-bottom: auto;`}>
                   <Img fixed={post.cover.childImageSharp.fixed}
                   alt="blog-post-icon"
-                  css={css`margin-top: auto;`}/>
+                  css={css``}/>
                 </div>
-                  <h4 css={css`color: var(--textNormal); margin-bottom: auto; margin-top: auto; margin-left: ${rhythm(0.5)};
-                  text-align: left;`}> {post.title} </h4>
+                <div css={css`display: flex; flex-direction: column; margin-left: ${rhythm(0.5)}; margin-top: auto; margin-bottom: auto;`}>
+                  <h4 css={css`color: var(--textNormal); text-align: left; margin-bottom: ${rhythm(0.1)};`}> {post.title} </h4>
+                  <span css={css`font-size: 75%; color: var(--textLight)`}>{post.date}</span>
+                </div>
               </div>
             </Link>
-            <hr css={css`margin-bottom: ${rhythm(0.5)};`}></hr>
+            <hr css={css`margin-bottom: 0;`}></hr>
             </div>
           ))}
         </div>

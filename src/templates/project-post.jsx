@@ -17,6 +17,8 @@ const MarkdownLayout = styled.div`
     padding: 0 1.5rem;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 7rem;
+    margin-top: 5rem;
   }
   `
 

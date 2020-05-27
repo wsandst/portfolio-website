@@ -4,8 +4,9 @@ import { css } from "@emotion/core"
 
 import ProjectCover from "./ProjectCover"
 
+// Component for listing projects nicely using ProjectCovers
 class ProjectListing extends React.Component {
-  getPostList() {
+  getProjectList() {
     const postList = [];
     this.props.postEdges.forEach(postEdge => {
       postList.push({
@@ -22,7 +23,7 @@ class ProjectListing extends React.Component {
   }
 
   render() {
-    const postList = this.getPostList();
+    const postList = this.getProjectList();
     console.log(postList);
     return (
       <div css={css`display: flex; justify-content: center; flex-wrap: wrap`}>

@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import Img from "gatsby-image"
 
 import Helmet from "react-helmet";
 import styled from "@emotion/styled"
@@ -17,6 +18,7 @@ const MarkdownLayout = styled.div`
     padding: 0 1.5rem;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 3rem;
   }
   `
 
@@ -38,13 +40,23 @@ export default class BlogPostTemplate extends React.Component {
         </Helmet>
         <MarkdownLayout>
           <SEO postPath={slug} postNode={postNode} postSEO />
-          <h1 css={css``}>
-            {post.title}
-          </h1>
-          <span css={css`color: var(--textNormal); font-size: 85%;`}>
-            {date}
-          </span>
-          <PostTags tags={post.tags} />
+            <div css={css`display: flex; flex-direction: row; margin-bottom: 3rem; `}>
+              <div css={css`display: flex; flex-direction: column; `}>
+                <h1 css={css`margin: 0; padding-right: 2rem; padding-top: 1.5rem;`}>
+                  {post.title}
+                </h1>
+                <span css={css`color: var(--textLight); font-size: 85%; padding-top: 0.5rem; padding-bottom: 0.5rem;`}>
+                  {date}
+                </span>
+                <PostTags tags={post.tags} />
+              </div>
+              <Img
+              className="project-cover"
+              fixed={post.cover.childImageSharp.fixed}
+              alt="cover"
+              css={css`border-radius: 3px; min-width: 150px; padding-left: 3rem;`}
+              />
+          </div>
           <div>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <div className="post-meta">
@@ -68,7 +80,7 @@ export const blogPageQuery = graphql`
         title
         cover {
           childImageSharp {
-            fixed(width: 372, height: 494, quality:90) {
+            fixed(width: 150, height: 150, quality:90) {
             ...GatsbyImageSharpFixed
               }
           }

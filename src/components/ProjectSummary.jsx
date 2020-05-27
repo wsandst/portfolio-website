@@ -11,6 +11,7 @@ import PostTags from "./PostTags";
 import "../layout/layout.css";
 import { formatDate } from '../utils/global'
 
+// Component for the summary of a project which is at the top of a project markdown page
 class ProjectSummary extends React.Component {  
     render() {
     const post = this.props.post;

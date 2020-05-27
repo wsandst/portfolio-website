@@ -10,6 +10,7 @@ body {
   --bg: white;
   --bgup1: white;
   --button: #F2F2F2;
+  --hover: rgb(245, 245, 245);
   --buttondown: rgb(230, 230, 230);
   --textLight: #444;
   --textNormal: #333;
@@ -32,6 +33,7 @@ body.dark {
   --bgup1: #4A4A4A;
   --button: rgb(87, 87, 87);
   --buttondown: #4A4A4A;
+  --hover: rgb(53, 53, 53);
   --textLight: rgb(151, 151, 151);
   --textNormal: rgba(255, 255, 255, 0.88);
   --textTitle: white;

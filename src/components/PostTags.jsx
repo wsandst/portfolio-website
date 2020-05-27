@@ -65,6 +65,7 @@ class TagContainer extends Component {
   }
 }
 
+// Component for listing the tags of a project/blog post
 class PostTags extends Component {
   render() {
     const { tags } = this.props;

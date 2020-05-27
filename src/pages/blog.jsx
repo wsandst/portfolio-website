@@ -1,6 +1,7 @@
 import React from "react";
 
 import Helmet from "react-helmet";
+import { css } from "@emotion/core"
 
 import MainLayout from "../layout/layout";
 import BlogListing from "../components/BlogListing";
@@ -11,8 +12,9 @@ class BlogPage extends React.Component {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
       <MainLayout>
-      <Helmet title={`Blog | ${config.siteTitle}`} />
+      <Helmet title={`Articles | ${config.siteTitle}`} />
       <div className="blog-container">
+        <h1 css={css`max-width: 800px; padding: 0 1.5rem; margin-left: auto; margin-right: auto; margin-top: 2rem;`}>Articles</h1>
         <BlogListing postEdges={postEdges}/>
       </div>
       </MainLayout>

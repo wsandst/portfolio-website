@@ -15,6 +15,7 @@ class ProjectsPage extends React.Component {
       <MainLayout>
         <Helmet title={`Projects | ${config.siteTitle}`} />
         <div css={css`margin-bottom: 7rem;`} className="projects-container">
+          <h1 css={css`text-align: center; margin-top: 1rem;`}>Projects</h1>
           <ProjectListing postEdges={postEdges} />
         </div>
       </MainLayout>

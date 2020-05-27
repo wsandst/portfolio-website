@@ -2,7 +2,7 @@ const config = {
   siteTitle: "WSANDST Portfolio", // Site title.
   siteTitleShort: "WSANDST", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "WSANDST Programming", // Alternative site title for SEO.
-  siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
+  siteLogo: "/static/profile.png", // Logo used for SEO and manifest.
   siteUrl: "https://gatsby-advanced-starter-demo.netlify.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "A Portfolio Website showcasing various projects", // Website description used for RSS feeds/meta description tag.

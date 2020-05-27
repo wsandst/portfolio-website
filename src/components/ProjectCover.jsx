@@ -20,12 +20,13 @@ box-shadow: 2px 6px 30px var(--backgroundShadow);
   h1 {transition: all .3s ease; color: var(--textHighlight);}
 }
 `
-
+// Component for the cover art and title of a project
 class ProjectCover extends React.Component {  
     render() {
       const post = this.props.post
       return (
-        <div css={css`width: 300 px; margin: ${rhythm(0.6)};`}>
+        <div css={css`width: 300 px; margin: ${rhythm(0.6)}; transition: all .3s ease;
+        &:hover { margin-top: ${rhythm(0.4)};}`}>
             <Link to={post.path} key={post.title}>
             <ProjectBoxCSS>
               <div css={css`position: relative; padding-bottom: ${rhythm(1.8)}`}>
