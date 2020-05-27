@@ -24,7 +24,6 @@ class ProjectListing extends React.Component {
 
   render() {
     const postList = this.getProjectList();
-    console.log(postList);
     return (
       <div css={css`display: flex; justify-content: center; flex-wrap: wrap`}>
         {/* Your post list here. */

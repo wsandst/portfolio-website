@@ -152,8 +152,7 @@ export default class Header extends React.Component {
                     ) : (
                       <img src={darkicon} className="theme-icon" alt="Dark Mode" />
                     )}
-                </button>
-              )}
+                </button>)}
             </ThemeToggler>
           </DarkModeToggleButtonCSS>
         </div>
