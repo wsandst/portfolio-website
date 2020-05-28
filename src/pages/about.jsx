@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby"
+import {graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Helmet from "react-helmet";
@@ -33,9 +33,7 @@ class AboutPage extends React.Component {
               </div>
               <div css={css`padding-top: ${rhythm(0.5)};`}>
                 <span>
-                On a more personal side, I enjoy tea. Tea, especially tasty tea, is often said to be good for your health. But if tea is good for you, how good? And why?
-                It turns out that tea does contain substances that have been linked to a lower risk for heart disease, cancer, and other health problems that affect people. 
-                Grab those saucer cups and get chugging — tea is officially awesome for your health.
+                On a more personal side, I enjoy tea, reading and cats. I live in the small city of Umeå, located in northern Sweden. 
                 </span>
               </div>
             </div>
@@ -45,9 +43,14 @@ class AboutPage extends React.Component {
           @media (max-width: 530px) { max-width: 920px; margin-right: ${rhythm(0.4)}}`}>
           <h1> Knowledge </h1>
           <span>
-                On a more personal side, I enjoy tea. Tea, especially tasty tea, is often said to be good for your health. But if tea is good for you, how good? And why?
-                It turns out that tea does contain substances that have been linked to a lower risk for heart disease, cancer, and other health problems that affect people.
-                Grab down those saucer cups and get chugging — tea is officially awesome for your health.
+                Throughout my various projects I have learned many different programming languages and frameworks.
+                Here's a list of some of them.
+                <ul css={css`padding-top: 1rem;`}>
+                <li><strong>C++, Python, Javascript</strong></li>
+                <li><strong>Linux</strong></li>
+                <li><strong>Wordpress, Gatsby</strong></li>
+                <li><strong>OpenGL, PyTorch, QT5</strong></li>
+                </ul>
             </span>
           </div>
           <div css={css`margin-left: ${rhythm(8)}; padding-left: ${rhythm(1.5)}; margin-top: ${rhythm(2)}; border-left: 1px solid var(--hr);
@@ -55,9 +58,8 @@ class AboutPage extends React.Component {
           @media (max-width: 530px) {margin-left: 0}`}>
           <h1> Timeline </h1>
           <span>
-                On a more personal side, I enjoy tea. Tea, especially tasty tea, is often said to be good for your health. But if tea is good for you, how good? And why?
-                It turns out that tea does contain substances that have been linked to a lower risk for heart disease, cancer, and other health problems that affect people. 
-                Grab down those saucer cups and get chugging — tea is officially awesome for your health.
+                I started programming Python at the age of 15, which started a lifelong passion of programming. In the spring of 2020 I decided to drop out of med school
+                to pursue a degree in Computer Science. That's about it, so far.
             </span>
           </div>
           <div css={css`margin-top: ${rhythm(2)}; max-width: 620px; padding-right: ${rhythm(1)}; border-right: 1px solid var(--hr);
@@ -65,9 +67,13 @@ class AboutPage extends React.Component {
             @media (max-width: 530px) { max-width: 920px; margin-right: ${rhythm(0.4)}}`}>
           <h1> Contact </h1>
           <span>
-                On a more personal side, I enjoy tea. Tea, especially tasty tea, is often said to be good for your health. But if tea is good for you, how good? And why?
-                It turns out that tea does contain substances that have been linked to a lower risk for heart disease, cancer, and other health problems that affect people. 
-                Grab down those saucer cups and get chugging — tea is officially awesome for your health.
+                You can email me at <strong>williamsandstrom99</strong> at <strong>hotmail</strong> dot <strong>com</strong>" if you'd like to speak with me. I'm also
+                available at various platforms around the web. 
+                <ul css={css`padding-top: 1rem;`}>
+                <li><strong>Github:</strong> <a href="https://github.com/wsandst"> wsandst </a> </li>
+                <li><strong>Twitter:</strong> <a href="https://twitter.com/_wsandst_">_wsandst_</a> </li>
+                <li><strong>Discord:</strong> Wydal#4592 </li>
+                </ul>
                 </span>
           </div>
         </div>
