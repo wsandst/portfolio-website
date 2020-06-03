@@ -7,6 +7,7 @@ tags:
     - c++
     - rendering
     - raymarching
+    - OpenGL
     - SDL2
 description: "A simple GPU Raymarcher designed in particular for 3D fractals. Developed using OpenGL Compute Shaders and C++. "
 aim: "The aim of this project was to learn about raymarching and work with OpenGL Compute Shaders"

@@ -7,6 +7,7 @@ tags:
     - c++
     - chess
     - machine-learning
+    - PyTorch
     - games
     - pinned
 description: "A modern UCI Chess Engine implemented in C++. It has an estimated ELO rating of ~2000 ELO."
