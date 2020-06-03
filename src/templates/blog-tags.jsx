@@ -15,7 +15,7 @@ export default class BlogTagTemplate extends React.Component {
     return (
       <MainLayout>
         <Helmet title={`Articles tagged as "${tag}" | ${config.siteTitle}`} />
-        <div className="tag-container" css={css`max-width: 800px; padding: 0 1.5rem; margin-left: auto; margin-right: auto; margin-top: 2rem;`}>
+        <div className="tag-container" css={css`max-width: 800px; padding: 0 1.5rem; margin-left: auto; margin-right: auto; margin-top: 2rem; margin-bottom: 2rem;`}>
     <h1 css={css`max-width: 800px; padding: 0 1.5rem; margin-left: auto; margin-right: auto; margin-top: 2rem;`}>Articles tagged as <u>{tag}</u></h1>
             <BlogListing postEdges={postEdges} />
         </div>

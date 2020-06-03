@@ -15,7 +15,7 @@ export default class ProjectTagTemplate extends React.Component {
     return (
       <MainLayout>
         <Helmet title={`Projects tagged as "${tag}" | ${config.siteTitle}`} />
-        <div className="tag-container" css={css`margin-bottom: 7rem;`}>
+        <div className="tag-container" css={css`margin-bottom: 7rem; padding-bottom: 1rem;`}>
           <h1 css={css`text-align: center; margin-top: 1rem;`}>Projects tagged as <u>{tag}</u></h1>
           <ProjectListing postEdges={postEdges} />
         </div>
