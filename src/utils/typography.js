@@ -10,7 +10,10 @@ altonTheme.overrideThemeStyles = () => ({
         color: 'var(--textTitle)'
     },
     a: {
-        color: 'var(--textLink)'
+        color: 'var(--textLink)',
+    },
+    "a:hover":{
+      color: 'var(--textLinkHover)'
     },
     span: {
         color: 'var(--textNormal)'
