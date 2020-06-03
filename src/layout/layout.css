@@ -6,7 +6,7 @@ html {
   height: 100%;
 }
 
-body {
+body.light {
   --bg: white;
   --bgup1: white;
   --button: #F2F2F2;
@@ -20,10 +20,7 @@ body {
   --hr: hsla(0, 0%, 0%, 0.2);
   --highlightShadow: rgba(0, 0, 0, 0.5);
   --backgroundShadow: rgba(0, 0, 0, 0.25);
-
-  background-color: var(--bg);
-  color: var(--textNormal);
-  transition: all .3s ease;
+  --fade: 0;
 }
 
 body.dark {
@@ -41,9 +38,19 @@ body.dark {
   --hr: hsla(0, 0%, 100%, 0.2);
   --highlightShadow: rgba(0, 0, 0, 1);
   --backgroundShadow: rgba(0, 0, 0, 0.6);
+  --fade: 0;
 }
 
-body {
+body.fade-themes
+{
+  --fade: all .3s ease;
+}
+
+body
+{
+  background-color: var(--bg);
+  color: var(--textNormal);
+  transition: var(--fade);
   min-height: 100%;
   min-width: 100%;
 }
@@ -71,7 +78,7 @@ body {
   top: 0;
   background-color: var(--bg);
   will-change: transform;
-  transition: all .3s ease;
+  transition: var(--fade);
   height: 82px;
   position: sticky;
 }

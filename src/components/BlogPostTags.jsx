@@ -34,7 +34,7 @@ span {
 
 const TagContainerCSS = styled.div`
 display: inline-block; 
-padding: 0.3rem 0.5rem; 
+padding: 0.2rem 0.5rem; 
 margin: 0 0.5rem 0.5rem 0; 
 background-color: var(--button); 
 border-radius: 6px; 
