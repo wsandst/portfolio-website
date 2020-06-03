@@ -14,25 +14,6 @@ export default function HTML(props) {
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
-      <script
-          key="darkmode-switcher"
-          dangerouslySetInnerHTML={{
-            __html: `(function() {
-                try {
-                  var mode = localStorage.getItem('theme');
-                  var supportDarkMode =
-                      window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-                  if (!mode && supportDarkMode) {
-                    document.body.classList.add('dark');
-                  }
-                  if (!mode) {
-                    return;
-                  }
-                  document.body.classList.add(mode);
-                } catch (e) {}
-              })();`,
-          }}
-        />
         {props.preBodyComponents}
         <div
           key={`body`}
