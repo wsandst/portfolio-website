@@ -32,7 +32,7 @@ class Footer extends Component {
       <footer className="footer">
         <hr css={css``}></hr>
         <div css={css`display: flex`}>
-            <FooterLink to={`/about/`}>
+            <FooterLink to={`/about/#contact`}>
               Contact
             </FooterLink>
             <span css={css`color: var(--textTitle); font-size: 75%; margin-left: auto; padding-right: ${rhythm(1)}; margin-top: auto; margin-bottom: auto;`}>

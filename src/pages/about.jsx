@@ -9,16 +9,21 @@ import { rhythm } from "../utils/typography"
 import MainLayout from "../layout/layout";
 import config from "../../data/SiteConfig";
 
+import teaIcon from '../../static/tea.svg'
+import contactIcon from '../../static/contact.svg'
+
 class AboutPage extends React.Component {
   render() {
+    console.log("Hey");
     return (
       <MainLayout>
         <Helmet title={`About | ${config.siteTitle}`} />
         <div css={css`max-width: 850px; margin-top: ${rhythm(1.5)}; margin-bottom: ${rhythm(6)}; margin-left: auto; margin-right: auto; display: flex; flex-direction: column;`}>
           <div css={css`display: flex; flex-direction: row; 
-          @media (max-width: 920px) { flex-direction: column;}`}>
-            <div css={css`min-width: 200px; display: flex; justify-content: center; margin-bottom: ${rhythm(1)};`}>
-              <Img fixed={this.props.data.file.childImageSharp.fixed} css={css`margin: auto; max-width: 160px; border-radius: 50%;`}> </Img>
+          @media (max-width: 620px) { flex-direction: column;}`}>
+            <div css={css`margin-right: ${rhythm(1.5)}; display: flex; justify-content: center; margin-bottom: ${rhythm(1)};
+             @media (max-width: 920px) { margin-right: 0;}`}>
+              <Img fixed={this.props.data.profile.childImageSharp.fixed} css={css`margin: auto; max-width: 160px; border-radius: 50%;`}> </Img>
             </div>
             <div css={css`padding-left: ${rhythm(1)}; border-left: 1px solid var(--hr);
             @media (max-width: 920px) {margin-left: ${rhythm(1.5)}}
@@ -38,9 +43,11 @@ class AboutPage extends React.Component {
               </div>
             </div>
           </div>
-          <div css={css`margin-top: ${rhythm(2)}; max-width: 620px; padding-right: ${rhythm(1)}; border-right: 1px solid var(--hr);
-          @media (max-width: 920px) { max-width: 920px; margin-right: ${rhythm(1)}}
-          @media (max-width: 530px) { max-width: 920px; margin-right: ${rhythm(0.4)}}`}>
+          <div css={css`margin-top: ${rhythm(2)};
+          display: flex; flex-direction: row; 
+          @media (max-width: 620px) { max-width: 920px; margin-right: ${rhythm(1)}; flex-direction: column; justify-content: flex-end;}
+          @media (max-width: 530px) { max-width: 920px; margin-right: 0; padding-right: 0;}`}>
+          <div css={css`border-right: 1px solid var(--hr); padding-right: ${rhythm(1)};`}>
           <h1> Knowledge </h1>
           <span>
                 Throughout my various projects I have learned many different programming languages and frameworks.
@@ -67,20 +74,37 @@ class AboutPage extends React.Component {
                   </strong></li>
                 </ul>
             </span>
+            </div>
+            <div css={css`display: flex; justify-content: flex-end; margin-left: ${rhythm(1.5)}; margin-bottom: ${rhythm(1)};
+             @media (max-width: 620px) { display: none; margin: 0;}`}>
+               <img src={teaIcon} alt="tea" css={css`width: 150px; height: 150px; margin: auto; margin-right: 0; max-width: 160px;`}/>
+            </div>
           </div>
-          <div css={css`margin-left: ${rhythm(8)}; padding-left: ${rhythm(1.5)}; margin-top: ${rhythm(2)}; border-left: 1px solid var(--hr);
-          @media (max-width: 920px) {margin-left: ${rhythm(1.5)}}
+          <div css={css` margin-top: ${rhythm(2)}; display: flex; flex-direction: row;
+          @media (max-width: 920px) {margin-left: 0}
           @media (max-width: 530px) {margin-left: 0}`}>
+            <div css={css`margin-right: ${rhythm(1.5)}; display: flex; justify-content: flex-start; margin-bottom: ${rhythm(1)};
+              @media (max-width: 620px) { display: none; margin: 0;}`}>
+              <Img fixed={this.props.data.profile2.childImageSharp.fixed} css={css`margin: auto; max-width: 160px; border-radius: 50%;`}> </Img>
+            </div>
+            <div>
+            <div css={css`padding-left: ${rhythm(1)}; border-left: 1px solid var(--hr);
+            @media (max-width: 920px) {margin-left: ${rhythm(1.5)}}
+            @media (max-width: 530px) {margin-left: 0}`}>
           <h1> Timeline </h1>
           <span>
                 I started programming Python at the age of 15, which started a lifelong passion of programming. In the spring of 2020 I decided to drop out of Med School
                 to instead pursue a degree in Computer Science. That's about it, so far.
             </span>
           </div>
-          <div css={css`margin-top: ${rhythm(2)}; max-width: 620px; padding-right: ${rhythm(1)}; border-right: 1px solid var(--hr);
-            @media (max-width: 920px) { max-width: 920px; margin-right: ${rhythm(1)}}
-            @media (max-width: 530px) { max-width: 920px; margin-right: ${rhythm(0.4)}}`}>
-          <h1> Contact </h1>
+          </div>
+          </div>
+          <div css={css`margin-top: ${rhythm(2)};
+            display: flex; flex-direction: row; 
+            @media (max-width: 620px) { max-width: 920px; margin-right: ${rhythm(1)}; flex-direction: column; justify-content: flex-end;}
+            @media (max-width: 530px) { max-width: 920px; margin-right: 0; padding-right: 0;}`}>
+          <div css={css`border-right: 1px solid var(--hr); padding-right: ${rhythm(1)};`}>
+          <h1 id="contact"> Contact </h1>
           <span>
                 You can email me at "<strong>williamsandstrom99</strong> at <strong>hotmail</strong> dot <strong>com</strong>" if you'd like to speak with me. I'm also
                 available at various platforms around the web. 
@@ -90,6 +114,11 @@ class AboutPage extends React.Component {
                 <li><strong>Discord:</strong> Wydal#4592 </li>
                 </ul>
                 </span>
+          </div>
+          <div css={css`display: flex; justify-content: flex-end; margin-left: ${rhythm(1.5)}; margin-bottom: ${rhythm(1)};
+             @media (max-width: 620px) { display: none; margin: 0;}`}>
+               <img src={contactIcon} alt="mail" css={css`width: 150px; height: 150px; margin: auto; margin-right: 0; max-width: 160px;`}/>
+            </div>
           </div>
         </div>
       </MainLayout>
@@ -101,7 +130,14 @@ export default AboutPage;
 
 export const pageQuery = graphql`
 query ImageQuery {
-  file(relativePath: { eq: "profile.png" }) {
+  profile: file(relativePath: { eq: "profile.png" }) {
+    childImageSharp {
+      fixed(width: 160, height: 160, quality:90) {
+        ...GatsbyImageSharpFixed
+          }
+      }
+    }
+  profile2: file(relativePath: { eq: "profile2.png" }) {
     childImageSharp {
       fixed(width: 160, height: 160, quality:90) {
         ...GatsbyImageSharpFixed

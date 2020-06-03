@@ -1,7 +1,6 @@
 ---
 title: "Magnificence 1"
 cover: "./magnificence-1-cover.jpg"
-category: "something"
 date: "2017-04-02"
 tags:
     - c++

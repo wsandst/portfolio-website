@@ -25,10 +25,10 @@ class ProjectSummary extends React.Component {
             <div css={css`margin-left: ${rhythm(0.7)}; max-width: 50%; 
              @media (max-width: 750px) { max-width: 100%; margin-left: 0;}`}>
                 <h1 css={css`margin-bottom: ${rhythm(0.5)};`}> {post.title} </h1>
-                <span> {post.description} </span>
+                <div dangerouslySetInnerHTML={{ __html: post.description }} />
                 <div css={css`margin-top: ${rhythm(1)};`}>
                     <h3 css={css`margin-bottom: ${rhythm(0.2)}`}> Aim </h3>
-                    <span> {post.aim} </span>
+                    <div dangerouslySetInnerHTML={{ __html: post.aim }} />
                 </div>
                 <div css={css`margin-top:${rhythm(0.7)}; margin-bottom: ${rhythm(0.2)};`}>
                     <GitHubButton href={post.github} data-size="large"> View Code</GitHubButton>
