@@ -35,27 +35,38 @@ export default class BlogPostTemplate extends React.Component {
     const date = formatDate(post.date)
     return (
       <MainLayout>
-       <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
-        </Helmet>
+       <Helmet> <title>{`${post.title} | ${config.siteTitle}`}</title> </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
             <div css={css`display: flex; flex-direction: row; margin-bottom: 3rem; 
-            max-width: 800px;padding: 0 1.5rem; margin-left: auto; margin-right: auto; margin-top: 1.5rem;`}>
-              <div css={css`display: flex; flex-direction: column; `}>
-                <h1 css={css`margin: 0; padding-right: 2rem; padding-top: 1.5rem;`}>
-                  {post.title}
-                </h1>
-                <span css={css`color: var(--textLight); font-size: 85%; padding-top: 0.5rem; padding-bottom: 0.5rem;`}>
-                  {date}
-                </span>
-                <PostTags tags={post.tags} />
-              </div>
+            max-width: 800px; padding: 0 1.5rem; margin-left: auto; margin-right: auto; margin-top: 2rem;
+            @media (max-width: 620px) {flex-direction: column; margin-top: 0.5rem;}`}>
+              <div css={css`display: none;}
+                            @media (max-width: 620px) {display: initial; margin: 0; }`}>
               <Img
               className="project-cover"
               fixed={post.cover.childImageSharp.fixed}
               alt="cover"
-              css={css`border-radius: 3px; min-width: 150px; padding-left: 3rem;`}
+              css={css`border-radius: 3px; display: none; min-width: 60px; max-width: 60px; min-height: 60px; max-height: 60px;}`}
               />
+              </div>
+              <div css={css`display: flex; flex-direction: column;  `}>
+                <h1 css={css`margin: 0; padding-right: 2rem; padding-top: 1rem;
+                @media (max-width: 620px) {font-size: 170%; padding-top: 0.2rem;}`}>
+                  {post.title}
+                </h1>
+                <span css={css`color: var(--textLight); font-size: 85%; padding-top: 0.5rem; padding-bottom: 1rem;`}>
+                  {date} &nbsp;·&nbsp; {postNode.timeToRead} min read
+                </span>
+                <PostTags tags={post.tags} />
+              </div>
+              <div css={css`@media (max-width: 620px) { display: none }`}>
+              <Img
+              className="project-cover"
+              fixed={post.cover.childImageSharp.fixed}
+              alt="cover"
+              css={css`border-radius: 3px; min-width: 150px; padding-left: 1rem; margin-bottom: 5rem;`}
+              />
+              </div>
           </div>
           <MarkdownLayout>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />

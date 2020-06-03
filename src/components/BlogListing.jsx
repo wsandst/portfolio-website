@@ -35,7 +35,7 @@ class BlogListing extends React.Component {
             <Link to={post.path} key={post.title}>
               <div css={css`display: flex; flex-direction: row; color: var(--textTitle); align-items: start;
               padding-bottom: ${rhythm(0.7)}; padding-top: ${rhythm(0.7)};
-              &:hover { background-color: var(--hover)}`}>
+              &:hover { background-color: var(--hover)}; border-radius: 5px;`}>
                 <div css={css`margin-bottom: auto;`}>
                   <Img fixed={post.cover.childImageSharp.fixed}
                   alt="blog-post-icon"
@@ -43,7 +43,7 @@ class BlogListing extends React.Component {
                 </div>
                 <div css={css`display: flex; flex-direction: column; margin-left: ${rhythm(0.5)}; margin-top: auto; margin-bottom: auto;`}>
                   <h4 css={css`color: var(--textNormal); text-align: left; margin-bottom: ${rhythm(0.1)};`}> {post.title} </h4>
-                  <span css={css`font-size: 75%; color: var(--textLight)`}>{post.date}</span>
+                  <span css={css`font-size: 75%; color: var(--textLight)`}>{post.date} &nbsp;·&nbsp; {post.timeToRead} min read</span>
                 </div>
               </div>
             </Link>

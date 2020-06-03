@@ -39,8 +39,8 @@ export default class ProjectPostTemplate extends React.Component {
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <ProjectSummary post={post}> </ProjectSummary>
-        <div css={hasContent ? css`` : css`margin-bottom: 6rem;
-           @media (max-width: 750px) { margin-bottom: 0}`}>
+        <div css={hasContent ? css`margin-bottom: 6rem;` : css`margin-bottom: 6rem;
+           @media (max-width: 750px) { margin-bottom: 0rem;}`}>
         <div css={hasContent ? css`` : css`display:none;`}>
         <hr></hr>
         <MarkdownLayout>

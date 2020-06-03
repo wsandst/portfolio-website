@@ -16,11 +16,11 @@ class ProjectSummary extends React.Component {
     render() {
     const post = this.props.post;
     const date = formatDate(post.date)
-    const authorSnippet = (post.authors == "") ? date : (post.authors + "   |  " + date)
+    const authorSnippet = (post.authors == "") ? date : (date + " \u00a0·\u00a0 " + post.authors)
     return (
         <div css={css`max-width: 1000px; margin-top: ${rhythm(1.5)}; margin-bottom: ${rhythm(1.5)}; margin-left: auto; margin-right: auto; `}>
         <div css={css`display: flex; justify-content: center; flex-direction: row;
-                        @media (max-width: 750px) { flex-direction: column;}`}>
+                        @media (max-width: 750px) { flex-direction: column; margin-bottom: ${rhythm(5)};}`}>
             <ProjectCoverSimple post= {post}></ProjectCoverSimple>
             <div css={css`margin-left: ${rhythm(0.7)}; max-width: 50%; 
              @media (max-width: 750px) { max-width: 100%;}`}>
@@ -34,7 +34,7 @@ class ProjectSummary extends React.Component {
                     <GitHubButton href={post.github} data-size="large"> View Code</GitHubButton>
                 </div>
                 <div css={css``}>
-                  <span css={css`color: var(--textNormal); font-size: 80%;`}> {authorSnippet} </span>
+                  <span css={css`color: var(--textLight); font-size: 80%;`}> {authorSnippet} </span>
                 </div>
                 <div css={css`margin-top: ${rhythm(0.5)};`} >
                     <PostTags tags={post.tags} />
