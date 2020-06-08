@@ -28,6 +28,7 @@ const DownloadButtonCSS = styled.div`
 
 class DownloadButton extends Component {
     render() {
+      return(<div></div>)
       const downloads = this.props.location.split(",");
       if (downloads && downloads[0] != "")
       {
