@@ -88,6 +88,7 @@ export const pageQuery = graphql`
         description
         aim
         github
+        download
         authors
       }
       fields {

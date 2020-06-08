@@ -130,7 +130,7 @@ export default AboutPage;
 
 export const pageQuery = graphql`
 query ImageQuery {
-  profile: file(relativePath: { eq: "profile.png" }) {
+  profile: file(relativePath: { eq: "profile.jpg" }) {
     childImageSharp {
       fixed(width: 160, height: 160, quality:90) {
         ...GatsbyImageSharpFixed

@@ -8,6 +8,7 @@ import { rhythm } from "../utils/typography"
 import GitHubButton from "../../node_modules/react-github-btn/index";
 
 import PostTags from "./ProjectPostTags";
+import DownloadButton from "./DownloadButton";
 import "../layout/layout.css";
 import { formatDate } from '../utils/global'
 
@@ -30,8 +31,13 @@ class ProjectSummary extends React.Component {
                     <h3 css={css`margin-bottom: ${rhythm(0.2)}`}> Aim </h3>
                     <div dangerouslySetInnerHTML={{ __html: post.aim }} />
                 </div>
-                <div css={css`margin-top:${rhythm(0.7)}; margin-bottom: ${rhythm(0.2)};`}>
-                    <GitHubButton href={post.github} data-size="large"> View Code</GitHubButton>
+                <div css={css`display: flex; flex-direction: row;`}>
+                  <div css={css`margin-top:${rhythm(0.7)}; margin-bottom: ${rhythm(0.2)};`}>
+                      <GitHubButton href={post.github} data-size="large"> View Code</GitHubButton>
+                  </div>
+                  <div css={css`margin-top:${rhythm(0.7)}; margin-bottom: ${rhythm(0.2)}; margin-left: ${rhythm(1)} `}>
+                      <DownloadButton location={post.download}> Download</DownloadButton>
+                  </div>
                 </div>
                 <div css={css``}>
                   <span css={css`color: var(--textLight); font-size: 80%;`}> {authorSnippet} </span>

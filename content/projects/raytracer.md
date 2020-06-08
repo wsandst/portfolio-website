@@ -15,6 +15,7 @@ tags:
 
 description: "A simple Real-time GPU Raytracer implemented using OpenGL Compute Shaders in C++. It supports reflection and refraction with the Fresnel effect as well as hard shadows. It supports dynamic objects of different types (meshes, spheres and boxes). It also has directional and point lights."
 aim: "The aim of this project was practise using OpenGL Compute Shaders as well as learn about raytracing/pathtracing."
-github: "https://github.com/wsandst/gpu-pathtracer"
+github: "https://github.com/wsandst/gpu-pathtracer, https://github.com/wsandst/gpu-pathtracer2, https://github.com/wsandst/gpu-pathtracer3"
+download: "Windows: raytracer.zip, Linux: raytracer2.zip"
 authors: ""
 ---

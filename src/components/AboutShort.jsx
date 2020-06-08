@@ -9,7 +9,7 @@ import GitHubButton from 'react-github-btn'
 export default function AboutShort() {
     const data = useStaticQuery(graphql`
       query {
-        file(relativePath: { eq: "profile.png" }) {
+        file(relativePath: { eq: "profile.jpg" }) {
           childImageSharp {
             fixed(width: 160, height: 160, quality:90) {
               ...GatsbyImageSharpFixed
