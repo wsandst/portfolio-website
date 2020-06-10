@@ -85,7 +85,7 @@ body
   top: 0;
   background-color: var(--bg);
   will-change: transform;
-  transition: var(--fade);
+  transition: all .3s ease;
   height: 82px;
   position: sticky;
 }
