@@ -19,6 +19,7 @@ const MarkdownLayout = styled.div`
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
+    margin-bottom: 8rem;
   }
   `
 
@@ -64,7 +65,7 @@ export default class BlogPostTemplate extends React.Component {
               className="project-cover"
               fixed={post.cover.childImageSharp.fixed}
               alt="cover"
-              css={css`border-radius: 3px; min-width: 150px; padding-left: 1rem; margin-bottom: 5rem;`}
+              css={css`border-radius: 3px; min-width: 150px; padding-left: 1rem; margin-bottom: 1rem;`}
               />
               </div>
           </div>
@@ -96,11 +97,7 @@ export const blogPageQuery = graphql`
           }
         }
         date
-        category
         tags
-        description
-        aim
-        github
       }
       fields {
         slug

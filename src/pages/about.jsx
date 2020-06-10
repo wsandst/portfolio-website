@@ -117,7 +117,7 @@ class AboutPage extends React.Component {
           </div>
           <div css={css`display: flex; justify-content: flex-end; margin-left: ${rhythm(1.5)}; margin-bottom: ${rhythm(1)};
              @media (max-width: 620px) { display: none; margin: 0;}`}>
-               <img src={contactIcon} alt="mail" css={css`width: 150px; height: 150px; margin: auto; margin-right: 0; max-width: 160px;`}/>
+              <Img fixed={this.props.data.cat.childImageSharp.fixed} css={css`margin: auto; max-width: 160px; border-radius: 50%; margin-right: 0;`}> </Img>
             </div>
           </div>
         </div>
@@ -132,12 +132,19 @@ export const pageQuery = graphql`
 query ImageQuery {
   profile: file(relativePath: { eq: "profile.jpg" }) {
     childImageSharp {
-      fixed(width: 160, height: 160, quality:90) {
+      fixed(width: 160, height: 160, quality:100) {
         ...GatsbyImageSharpFixed
           }
       }
     }
   profile2: file(relativePath: { eq: "profile2.png" }) {
+    childImageSharp {
+      fixed(width: 160, height: 160, quality:90) {
+        ...GatsbyImageSharpFixed
+          }
+      }
+    }
+  cat: file(relativePath: { eq: "cat.jpg" }) {
     childImageSharp {
       fixed(width: 160, height: 160, quality:90) {
         ...GatsbyImageSharpFixed

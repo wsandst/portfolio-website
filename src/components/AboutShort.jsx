@@ -11,7 +11,7 @@ export default function AboutShort() {
       query {
         file(relativePath: { eq: "profile.jpg" }) {
           childImageSharp {
-            fixed(width: 160, height: 160, quality:90) {
+            fixed(width: 160, height: 160, quality:100) {
               ...GatsbyImageSharpFixed
                 }
             }
