@@ -93,7 +93,8 @@ class AboutPage extends React.Component {
             @media (max-width: 530px) {margin-left: 0}`}>
           <h1> Timeline </h1>
           <span>
-                I started programming Python at the age of 15, which started a lifelong passion of programming. In the spring of 2020 I decided to drop out of Med School
+                I started programming Python at the age of 15, which started a lifelong passion of programming. I've gone a bit back and forth between
+                different university programs but most recently, in the spring of 2020, I decided to drop out of Med School
                 to instead pursue a degree in Computer Science. That's about it, so far.
             </span>
           </div>
