@@ -1,0 +1,14 @@
+---
+title: "Mandelbrot written in x86-64 Assembly"
+cover: "./mandelbrot-asm-cover.jpg"
+date: "2020-10-13"
+tags:
+    - assembly
+    - x86-64
+    - nasm
+description: "This project is still under development. A simple Mandelbrot written in x86-64 Assembly. The program saves a colored mandelbrot to a .ppm image file."
+aim: "The aim of this project was to learn about x86-64 Assembly."
+github: "https://github.com/wsandst/mandelbrot-asm"
+download: ""
+authors: ""
+---
