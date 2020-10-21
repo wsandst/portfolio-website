@@ -81,7 +81,7 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-sitemap",
     `gatsby-plugin-emotion`,
-    'gatsby-plugin-dark-mode',
+    'gatsby-plugin-dark-mode-mod',
     {
       resolve: "gatsby-plugin-manifest",
       options: {

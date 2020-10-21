@@ -145,7 +145,7 @@ export default class Header extends React.Component {
           <DarkModeToggleButtonCSS>
             <ThemeToggler>
               {({ theme, toggleTheme }) => (
-                <button onClick={e => { console.log("test"); document.body.classList.add('fade-themes'); toggleTheme(theme === 'dark' ? 'light' : 'dark'); }}
+                <button onClick={e => { document.body.classList.add('fade-themes'); toggleTheme(theme === 'dark' ? 'light' : 'dark'); }}
                     title="Toggle Dark Mode">
                   {theme === 'dark' ? (
                       <img src={lighticon} className="theme-icon" alt="Light Mode" />
