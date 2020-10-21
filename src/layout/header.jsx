@@ -43,31 +43,34 @@ h3
 `
 
 const HeaderLink = styled(Link)`
-  padding-left: ${rhythm(1.5)}; 
+  padding-left: ${rhythm(0.75)}; 
+  padding-right: ${rhythm(0.75)}; 
   color: var(--textTitle);
   &:hover {
     color: var(--textHighlight);
   }
   @media (max-width: 550px)
   {
-    padding-left: ${rhythm(1)}; 
+    padding-left: ${rhythm(0.5)}; 
+    padding-right: ${rhythm(0.5)}; 
   }
   @media (max-width: 390px)
   {
-    padding-left: ${rhythm(0.7)}; 
+    padding-left: ${rhythm(0.35)}; 
+    padding-right: ${rhythm(0.35)}; 
   }
   `
 
 const DarkModeToggleButtonCSS = styled.div
 `
-padding-left: ${rhythm(1.5)}; 
+padding-left: ${rhythm(0.75)}; 
 @media (max-width: 550px)
 {
-  padding-left: ${rhythm(1)}; 
+  padding-left: ${rhythm(0.5)}; 
 }
 @media (max-width: 390px)
 {
-  padding-left: ${rhythm(0.7)}; 
+  padding-left: ${rhythm(0.35)}; 
 }
 button {
   -webkit-appearance: none;
