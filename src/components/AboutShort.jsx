@@ -21,8 +21,8 @@ export default function AboutShort() {
     return (
       <div>
         <div css={css`height:180px; margin-left: ${rhythm(2)};display: flex; justify-content: left;
-                    50%; @media (max-width: 550px) { margin-left:${rhythm(0.5) }}`}>
-          <div css={css`@media (max-width: 550px) { display: none; visibility: hidden; }`}>
+                    50%; @media (max-width: 630px) { margin-left:${rhythm(0.5) }}`}>
+          <div css={css`@media (max-width: 630px) { display: none; visibility: hidden; }`}>
           <Link to={`/about`}>
             <Img fixed={data.file.childImageSharp.fixed} css={css`border-radius: 50%;`}> </Img>
           </Link>
