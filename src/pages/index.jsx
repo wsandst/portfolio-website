@@ -22,7 +22,7 @@ class HomePage extends React.Component {
             <AboutShort></AboutShort>
             <div className="posts-container">
               <ProjectListing postEdges={postEdges} />
-              <Link to={"/projects/"} css={css`margin-top: ${rhythm(1)}; margin-bottom: ${rhythm(4.5)}; display: flex; justify-content: center; font-size:90%; color: var(--textNormal);
+              <Link to={"/projects/"} css={css`margin-top: ${rhythm(1)}; padding-bottom: ${rhythm(4.5)}; display: flex; justify-content: center; font-size:90%; color: var(--textNormal);
               &:hover {color: var(--textHighlight);} `}> 
               More Projects
               </Link>
@@ -54,7 +54,7 @@ class HomePage extends React.Component {
               tags
               cover {
                 childImageSharp {
-                fixed(width: 274, height: 365, quality:90) {
+                fixed(width: 255, height: 339, quality:100) {
                   ...GatsbyImageSharpFixed
                     }
                 }

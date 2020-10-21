@@ -1,5 +1,5 @@
 ---
-title: "Recognizing handwritten digits using Machine Learning"
+title: "Recognizing handwritten digits with Machine Learning"
 cover: "./mnist-from-scratch-cover.jpg"
 date: "2020-04-01"
 tags:
