@@ -39,6 +39,12 @@ void function() {
   })
 
   setTheme(preferredTheme || 'dark')
+
+  // Flash fix
+  if (window.__theme == 'light') {
+    document.getElementById("main").style.backgroundColor = "white"
+  }
+
 }()
     `,
       },

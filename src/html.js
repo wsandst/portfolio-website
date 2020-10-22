@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 export default function HTML(props) {
   return (
-    <html {...props.htmlAttributes} style={{backgroundColor: "#202020"}}>
+    <html {...props.htmlAttributes} style={{backgroundColor: "#202020"}} id="main">
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
