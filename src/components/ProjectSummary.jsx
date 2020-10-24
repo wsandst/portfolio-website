@@ -19,12 +19,12 @@ class ProjectSummary extends React.Component {
     const date = formatDate(post.date)
     const authorSnippet = (post.authors == "") ? date : (date + " \u00a0·\u00a0 " + post.authors)
     return (
-        <div css={css`max-width: 1000px; margin-top: ${rhythm(1.5)}; margin-bottom: ${rhythm(1.5)}; margin-left: auto; margin-right: auto; `}>
+        <div css={css`max-width: 1000px; margin-top: ${rhythm(1.5)}; padding-bottom: ${rhythm(0.5)}; margin-left: auto; margin-right: auto; `}>
         <div css={css`display: flex; justify-content: center; flex-direction: row; 
-                        @media (max-width: 750px) { flex-direction: column; margin-bottom: ${rhythm(5)};}`}>
+                        @media (max-width: 800px) { flex-direction: column; margin-bottom: ${rhythm(5)};}`}>
             <ProjectCoverSimple post= {post}></ProjectCoverSimple>
             <div css={css`margin-left: ${rhythm(0.7)}; max-width: 50%; 
-             @media (max-width: 750px) { max-width: 100%; margin-left: 0;}`}>
+             @media (max-width: 800px) { max-width: 100%; margin-left: 0;}`}>
                 <h1 css={css`margin-bottom: ${rhythm(0.5)};`}> {post.title} </h1>
                 <div dangerouslySetInnerHTML={{ __html: post.description }} />
                 <div css={css`margin-top: ${rhythm(1)};`}>
@@ -60,7 +60,7 @@ padding: ${rhythm(0.6)};
 word-wrap: break-word;
 transition: all .3s ease;
 box-shadow: 2px 6px 30px var(--backgroundShadow);
-@media (max-width: 750px) { 
+@media (max-width: 800px) { 
     max-width: 70%;
     margin-left: auto;
     margin-right: auto;

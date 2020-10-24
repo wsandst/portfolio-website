@@ -6,32 +6,6 @@ import _ from "lodash";
 
 import "../layout/layout.css";
 
-/*a {
-  display: inline-block;
-}
-span {
-  display: inline-block;
-  padding: 0.3rem 0.5rem;
-  background: $light;
-  border-radius: $border-radius;
-  color: lighten($font-color, 10%);
-  font-size: 0.8rem;
-  font-weight: 400;
-  margin: 0 0.5rem 0.5rem 0;
-
-  .count {
-    color: $primary-color;
-    font-weight: 700;
-    margin-left: 0.25rem;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    background: darken($light, 5%);
-    color: $font-color;
-  }*/
-
 const TagContainerCSS = styled.div`
 display: inline-block; 
 padding: 0.2rem 0.5rem; 
