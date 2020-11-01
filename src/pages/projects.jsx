@@ -43,7 +43,7 @@ query ProjectsQuery {
           cover {
             childImageSharp {
             fixed(width: 255, height: 339, quality:90) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_withWebp
                 }
             }
           }

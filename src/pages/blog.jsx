@@ -44,7 +44,7 @@ query BlogQuery {
           cover {
             childImageSharp {
             fixed(width: 50, height: 50, quality:90) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_withWebp
                 }
             }
           }

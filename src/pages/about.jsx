@@ -135,21 +135,21 @@ query ImageQuery {
   profile: file(relativePath: { eq: "profile.jpg" }) {
     childImageSharp {
       fixed(width: 160, height: 160, quality:100) {
-        ...GatsbyImageSharpFixed
+        ...GatsbyImageSharpFixed_withWebp
           }
       }
     }
   profile2: file(relativePath: { eq: "profile2.png" }) {
     childImageSharp {
       fixed(width: 160, height: 160, quality:90) {
-        ...GatsbyImageSharpFixed
+        ...GatsbyImageSharpFixed_withWebp
           }
       }
     }
   cat: file(relativePath: { eq: "cat.jpg" }) {
     childImageSharp {
       fixed(width: 160, height: 160, quality:90) {
-        ...GatsbyImageSharpFixed
+        ...GatsbyImageSharpFixed_withWebp
           }
       }
     }

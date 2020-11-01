@@ -12,7 +12,7 @@ export default function AboutShort() {
         file(relativePath: { eq: "profile.jpg" }) {
           childImageSharp {
             fixed(width: 160, height: 160, quality:100) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_withWebp
                 }
             }
           }
