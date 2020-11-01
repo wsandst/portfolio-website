@@ -25,8 +25,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    "gatsby-plugin-preload-fonts",
-    "gatsby-plugin-webpack-bundle-analyser-v2",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-lodash",
     "gatsby-plugin-sharp",

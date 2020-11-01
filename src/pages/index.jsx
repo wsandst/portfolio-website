@@ -54,7 +54,7 @@ class HomePage extends React.Component {
               tags
               cover {
                 childImageSharp {
-                fixed(width: 255, height: 339, quality:100) {
+                fixed(width: 255, height: 339, quality:90) {
                   ...GatsbyImageSharpFixed_withWebp
                     }
                 }
