@@ -14,7 +14,6 @@ import contactIcon from '../../static/contact.svg'
 
 class AboutPage extends React.Component {
   render() {
-    console.log("Hey");
     return (
       <MainLayout>
         <Helmet title={`About | ${config.siteTitle}`} />
