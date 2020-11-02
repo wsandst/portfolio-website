@@ -22,8 +22,7 @@ const FooterLink = styled(Link)`
   font-size: 90%;
   margin-top: auto; margin-bottom: auto;
   `
-
-
+  
   
 class Footer extends Component {
   render() {

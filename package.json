@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-advanced",
-  "description": "GatsbyJS starter that includes examples for advanced use cases.",
+  "name": "wsandst-portfolio-website",
+  "description": "Portfolio Website for WSANDST",
   "version": "1.1.0",
-  "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
+  "author": "William Sandström <william.sandstroem@gmail.com>",
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",

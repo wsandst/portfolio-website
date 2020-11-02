@@ -5,8 +5,6 @@ import { Link } from "gatsby"
 import { rhythm, scale } from "../utils/typography"
 import { css } from "@emotion/core"
 
-import { formatDate } from '../utils/global'
-
 class BlogListing extends React.Component {
   getPostList() {
     const postList = [];
@@ -16,7 +14,7 @@ class BlogListing extends React.Component {
         tags: postEdge.node.frontmatter.tags,
         title: postEdge.node.frontmatter.title,
         cover: postEdge.node.frontmatter.cover,
-        date: formatDate(postEdge.node.fields.date),
+        date: postEdge.node.frontmatter.date,
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead
       });

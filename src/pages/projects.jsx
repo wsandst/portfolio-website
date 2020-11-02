@@ -47,7 +47,7 @@ query ProjectsQuery {
                 }
             }
           }
-          date
+          date(formatString: "MMMM Do, YYYY")
         }
       }
     }

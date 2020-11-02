@@ -48,7 +48,7 @@ query BlogQuery {
                 }
             }
           }
-          date
+          date(formatString: "MMMM Do, YYYY")
         }
       }
     }

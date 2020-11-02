@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import Helmet from "react-helmet";
 import urljoin from "url-join";
-import moment from "moment";
 
 import config from "../../data/SiteConfig";
 
@@ -52,7 +51,7 @@ class SEO extends Component {
 
       if (!postNode.frontmatter.date) return null;
 
-      return moment(postNode.frontmatter.date, config.dateFromFormat).toDate();
+      return postNode.frontmatter.date;
     };
 
     image = getImagePath(image);

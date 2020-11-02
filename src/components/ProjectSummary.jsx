@@ -10,13 +10,12 @@ import GitHubButton from "../../node_modules/react-github-btn/index";
 import PostTags from "./ProjectPostTags";
 import DownloadButton from "./DownloadButton";
 import "../layout/layout.css";
-import { formatDate } from '../utils/global'
 
 // Component for the summary of a project which is at the top of a project markdown page
 class ProjectSummary extends React.Component {  
     render() {
     const post = this.props.post;
-    const date = formatDate(post.date)
+    const date = post.date;
     const authorSnippet = (post.authors == "") ? date : (date + " \u00a0·\u00a0 " + post.authors)
     return (
         <div css={css`max-width: 1000px; margin-top: ${rhythm(1.5)}; padding-bottom: ${rhythm(0.5)}; margin-left: auto; margin-right: auto; `}>

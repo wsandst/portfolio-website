@@ -10,7 +10,6 @@ import MainLayout from "../layout/layout";
 import PostTags from "../components/BlogPostTags";
 import SEO from "../components/SEO";
 import config from "../../data/SiteConfig";
-import { formatDate } from '../utils/global'
 
 
 const MarkdownLayout = styled.div`
@@ -33,7 +32,7 @@ export default class BlogPostTemplate extends React.Component {
       post.id = slug;
     }
     const hasContent = (postNode.html != "");
-    const date = formatDate(post.date)
+    const date = "2012"; //formatDate(post.date)
     return (
       <MainLayout>
        <Helmet> <title>{`${post.title} | ${config.siteTitle}`}</title> </Helmet>
@@ -96,7 +95,7 @@ export const blogPageQuery = graphql`
               }
           }
         }
-        date
+        date(formatString: "MMMM Do, YYYY")
         tags
       }
       fields {

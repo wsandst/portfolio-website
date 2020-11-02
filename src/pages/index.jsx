@@ -59,7 +59,7 @@ class HomePage extends React.Component {
                     }
                 }
               }
-              date
+              date(formatString: "MMMM Do, YYYY")
             }
           }
         }
