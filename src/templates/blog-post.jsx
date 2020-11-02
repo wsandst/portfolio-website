@@ -32,7 +32,7 @@ export default class BlogPostTemplate extends React.Component {
       post.id = slug;
     }
     const hasContent = (postNode.html != "");
-    const date = "2012"; //formatDate(post.date)
+    const date = postNode.frontmatter.date;
     return (
       <MainLayout>
        <Helmet> <title>{`${post.title} | ${config.siteTitle}`}</title> </Helmet>
