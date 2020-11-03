@@ -23,8 +23,8 @@ export default function AboutShort() {
         <div css={css`height:180px; margin-left: ${rhythm(2)};display: flex; justify-content: left;
                     50%; @media (max-width: 630px) { margin-left:${rhythm(0.5) }}`}>
           <div css={css`@media (max-width: 630px) { display: none; visibility: hidden; }`}>
-          <Link to={`/about`}>
-            <Img fixed={data.file.childImageSharp.fixed} css={css`border-radius: 50%;`}> </Img>
+          <Link to={`/about`} alt="About page">
+            <Img fixed={data.file.childImageSharp.fixed} css={css`border-radius: 50%;`} alt ="Profile Image"> </Img>
           </Link>
           </div>
           <div css={css`margin-left: ${rhythm(1.5)}; margin-bottom: ${rhythm(1)}; display: flex; flex-direction: column; justify-content: center; h2{margin:0}

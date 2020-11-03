@@ -35,6 +35,7 @@ h3
 &:hover {
   color: var(--textHighlight);
 }
+}
 @media (min-width: 550px)
 {
   display: none;
