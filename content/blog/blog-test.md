@@ -1,10 +1,10 @@
 ---
-title: "Example blog post I"
+title: "Example blog post I, with a quite long title"
 cover: "./placeholder.png"
 date: "2020-02-17"
 tags:
-    - unique
-    - blog2
+    - unique1
+    - blog
     - c++
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras fringilla nisl ut dui fermentum varius. Aliquam efficitur nisi id laoreet blandit. Vivamus lobortis ornare lobortis. Pellentesque ut justo nibh. Suspendisse scelerisque est sit amet lectus dapibus porta. Morbi eget imperdiet erat, ut imperdiet est. In et sollicitudin sapien, id molestie nulla. Donec ultrices velit nec sapien elementum gravida. Nulla pretium ante varius, ultricies mauris eget, iaculis orci. Nunc rutrum ipsum quis tincidunt aliquet.

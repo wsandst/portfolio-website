@@ -19,6 +19,10 @@ const MarkdownLayout = styled.div`
     margin-right: auto;
     margin-top: 3rem;
     margin-bottom: 8rem;
+    .post-meta
+    {
+      padding-top: 1.5rem;
+    }
   }
   `
 
