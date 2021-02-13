@@ -1,5 +1,5 @@
 ---
-title: "Migrating the Wordpress blog Löven4ever"
+title: "Sysadmin for the Wordpress blog Löven4ever"
 cover: "./loven4ever-cover.jpg"
 date: "2019-09-01"
 tags:
@@ -7,8 +7,10 @@ tags:
     - web-dev
     - website
     - migration
-description: "I migrated the 12 year old Wordpress blog www.loven4ever.com to a Raspberry Pi, fixed various issues and optimized the website down from 8 second loading time to 2 second loading time. It served as a learning opportunity for Wordpress and Linux server management."
-aim: "To migrate the website and fix various problems while learning about Wordpress."
+    - sysadmin
+description: "For several years (2015 and forward) I have managed the popular Wordpress Hockey blog Loven4ever, for instance migrating
+it between various web hosts and optimizing it down from an original 8 second load time to under 2 seconds."
+aim: "To keep the blog running smoothly for the end users."
 github: ""
 download: ""
 authors: ""

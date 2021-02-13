@@ -10,7 +10,7 @@ tags:
     - javascript
     - css
     - pinned
-description: "A personal portfolio website made using Gatsby and React. You are currently viewing the website. Blazingly fast due to Gatsby generating a static site."
+description: "A personal portfolio website made using Gatsby and React. You are currently viewing the website. Very fast due to Gatsby and a ton of optimization."
 aim: "The aim of this project make a portfolio website for myself and learn about Gatsby (using React), a modern website framework."
 github: "https://github.com/wsandst/portfolio-website"
 download: ""
