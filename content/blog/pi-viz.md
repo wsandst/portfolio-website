@@ -13,6 +13,7 @@ I took a text file I found online of the first 100 million digits of pi in decim
 converted it into a color. The resulting image looked like complete random noise, and I was quite satisifed with the 
 results until my friend pointed out that the method I used for converting the digits into colors was lossy. This meant that 
 I lost some information in the conversion, so my image was not really pi at all.  
+<br /><br />
 
 ![100k Digits of Pi](./pi100kcrop.png)  <br />
 
@@ -31,6 +32,7 @@ for every power of two until the all the bits have finally been extracted. The p
 where n is the amount of digits. We also have to do this division for every single digit, so in the end our complexity becomes O(n^3). 
 This made the conversion completely unfeasible with 100 millions of digit, even if we could have figured out how to divide such an extremely
 large number. Our teenage brains were defeated, and the project archived.  
+<br /> <br />
 
 ![1m Digits of Pi](./pi1mcrop.png)  <br />
 
