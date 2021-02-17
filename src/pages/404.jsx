@@ -18,7 +18,7 @@ class ErrorPage extends React.Component {
           <div css={css`color: var(--textNormal); display: flex; flex-direction: column; align-items: center;`}>
             <h1 css={css`text-align: center; margin-top: 7rem;`}>Error 404</h1>
             <h2 css={css`text-align: center; margin-top: 1rem;`}> The page you were looking for does not appear to exist</h2>
-            <h2 css={css`text-align: center; margin-top: 1rem;`}> Perhaps have some tea instead? </h2>
+            <h2 css={css`text-align: center; margin-top: 1rem;`}> Perhaps you could have some tea instead? </h2>
             <img src={teaIcon} alt="tea" css={css`width: 200px; height: 200px; margin-left: auto; margin-right: auto; margin-top: 1rem;`}/>
           </div>
         </MainLayout>

@@ -53,9 +53,9 @@ class AboutPage extends React.Component {
                 Here's a list of some of them.
                 <ul css={css`padding-top: 1rem;`}>
                   <li><strong>
+                  <Link to="/project-tags/python">Python</Link>,&nbsp;
                   <Link to="/project-tags/c">C++</Link>,&nbsp;
-                  <Link to="/project-tags/python"> Python</Link>,&nbsp;
-                  <Link to="/project-tags/javascript"> Javascript</Link>
+                  <Link to="/project-tags/javascript">Javascript</Link>
                   </strong></li>
                   <li><strong>
                   <Link to="/project-tags/wordpress">Wordpress</Link>,&nbsp;
@@ -64,9 +64,10 @@ class AboutPage extends React.Component {
                   <li><strong>
                   <Link to="/project-tags/react">React</Link>,&nbsp;
                   <Link to="/project-tags/open-gl">OpenGL</Link>,&nbsp;
-                  <Link to="/project-tags/py-torch">PyTorch</Link>,&nbsp;
                   <Link to="/project-tags/qt-5">QT5</Link>,&nbsp;
-                  <Link to="/project-tags/sdl-2">SDL2</Link>
+                  <Link to="/project-tags/sdl-2">SDL2</Link>,&nbsp;
+                  <Link to="/project-tags/godot">Godot</Link>,&nbsp;
+                  <Link to="/project-tags/py-torch">PyTorch</Link>
                   </strong></li>
                   <li><strong>
                   Linux
