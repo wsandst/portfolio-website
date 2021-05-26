@@ -7,7 +7,7 @@ const config = {
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "A Portfolio Website showcasing various projects", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteRssTitle: "WSANDST Project Feed", // Title of the RSS feed
+  siteRssTitle: "WSANDST Portfolio Feed", // Title of the RSS feed
   siteFBAppID: "1825356251115265", // FB Application ID for using app insights
   googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
@@ -18,7 +18,7 @@ const config = {
 
 // Make sure pathPrefix is empty if not needed
 if (config.pathPrefix === "/") {
-  config.pathPrefix = "";
+  config.pathPrefix = "/";
 } else {
   // Make sure pathPrefix only contains the first forward slash
   config.pathPrefix = `/${config.pathPrefix.replace(/^\/|\/$/g, "")}`;

@@ -55,6 +55,9 @@ class AboutPage extends React.Component {
                   <li><strong>
                   <Link to="/project-tags/python">Python</Link>,&nbsp;
                   <Link to="/project-tags/c">C++</Link>,&nbsp;
+                  <Link to="/project-tags/rust">Rust</Link>,&nbsp;
+                  <Link to="/project-tags/c">C</Link>,&nbsp;
+                  <Link to="/project-tags/java">Java</Link>,&nbsp;
                   <Link to="/project-tags/javascript">Javascript</Link>
                   </strong></li>
                   <li><strong>
@@ -64,13 +67,12 @@ class AboutPage extends React.Component {
                   <li><strong>
                   <Link to="/project-tags/react">React</Link>,&nbsp;
                   <Link to="/project-tags/open-gl">OpenGL</Link>,&nbsp;
-                  <Link to="/project-tags/qt-5">QT5</Link>,&nbsp;
-                  <Link to="/project-tags/sdl-2">SDL2</Link>,&nbsp;
+                  <Link to="/project-tags/qt-5">SDL2</Link>,&nbsp;
+                  <Link to="/project-tags/sdl-2">QT5</Link>,&nbsp;
                   <Link to="/project-tags/godot">Godot</Link>,&nbsp;
-                  <Link to="/project-tags/py-torch">PyTorch</Link>
                   </strong></li>
                   <li><strong>
-                  Linux
+                  Linux, Git, Make, CMake, Maven, Cargo
                   </strong></li>
                 </ul>
             </span>
@@ -94,8 +96,8 @@ class AboutPage extends React.Component {
             @media (max-width: 530px) {margin-left: 0}`}>
           <h1> Timeline </h1>
           <span>
-                I started programming Python at the age of 15, which started a lifelong passion of programming. Recently, in the spring of 2020, I 
-                decided to drop out of Med School to instead pursue a degree in Computer Science. That's about it, so far.
+                I started programming Python at the age of 15, which started a lifelong passion of programming. 
+                I'm currently pursuing a degree in Computer Science at Umeå University. That's about it, so far.
             </span>
           </div>
           </div>
