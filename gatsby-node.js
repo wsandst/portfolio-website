@@ -4,6 +4,12 @@ const path = require("path");
 const _ = require("lodash");
 const moment = require("moment");
 const siteConfig = require("./data/SiteConfig");
+const express = require(`express`)
+
+// Enable static folder in dev, makes the static subsites work then
+exports.onCreateDevServer = ({ app }) => {
+  app.use(express.static(`static`))
+}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
