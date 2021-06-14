@@ -164,6 +164,19 @@ h1 {
     }
 }
 
+/* Adjust for laptops with a small max-height */
+@media only screen and (max-height: 850px) and (min-width: 1000px) {
+    #screen-canvas {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-height: 768px) and (min-width: 1000px) {
+    #top-controls {
+        margin-top: 2.5em;
+    }
+}
+
 #controls-upper-row {
     margin-top: 1em;
     display: flex;
@@ -172,7 +185,7 @@ h1 {
 
 #controls-ab {
     margin-top: 2em;
-    margin-right: 1em;
+    margin-right: 0.5em;
     position: relative
 }
 
@@ -196,7 +209,7 @@ h1 {
 
 #controls-arrows {
     margin-right: auto;
-    margin-left: 1em;
+    margin-left: 0.5em;
     position: relative;
 }
 
@@ -253,6 +266,7 @@ h1 {
     padding-right: 12px;
     font-size: 18px;
     margin: 0;
+    cursor: pointer;
     /*border-radius: 8px;
     border: 2px solid white;*/
 }
@@ -268,8 +282,14 @@ h2 {
 .dropdown {
     position: relative;
     display: inline-block;
+    cursor: pointer;
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
   }
-  
+
   /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
@@ -299,14 +319,47 @@ h2 {
     background-color: #313131;
 }
 
+
   /* Change color of dropdown links on hover */
 .dropdown-content a:hover {color: rgb(197, 197, 197)}
   
-  /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {color: rgb(197, 197, 197)}
+
+/* Only show hover on non-mobile devices*/
+@media (hover: hover) {
+    /* Show the dropdown menu on hover */
+    /*.dropdown:hover .dropdown-content {display: block;}*/
+    .dropdown:hover #dropdown-content {
+        display: inline-block;
+    }
+
+    #sub-dropdown1:hover #sub-dropdown1-content {
+        display: inline-block;
+    }
+
+    #sub-dropdown2:hover #sub-dropdown2-content {
+        display: inline-block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {color: rgb(197, 197, 197)}
+}
+
+#dropdown-content {
+    display: none;
+}
+
+#sub-dropdown1-content {
+    display: none;
+}
+
+#sub-dropdown2-content {
+    display: none;
+}
+
+.dropdown-content-enabled .dropbtn {
+    color: rgb(197, 197, 197);
+}
+
 
 .dropdown-content-btn-disabled {
     padding: 12px 8px;
@@ -321,6 +374,18 @@ h2 {
     background-color: #3a3a3a;
 }
 
+
+.sub-dropdown-content {
+    position: absolute;
+    background-color: #585858;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0px 4px 4px 0;
+    box-shadow: 3px black;
+    margin-left: 160px;
+    margin-top: -46px;
+}
 
 #popup-message {
     position: absolute;
@@ -354,4 +419,8 @@ h2 {
     justify-content: left;
     align-items: center;
     font-size: 16px;
+}
+
+.is-ios * {
+    cursor: pointer;
 }

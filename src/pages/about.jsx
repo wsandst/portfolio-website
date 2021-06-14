@@ -57,19 +57,20 @@ class AboutPage extends React.Component {
                   <Link to="/project-tags/c">C++</Link>,&nbsp;
                   <Link to="/project-tags/rust">Rust</Link>,&nbsp;
                   <Link to="/project-tags/c">C</Link>,&nbsp;
-                  <Link to="/project-tags/java">Java</Link>,&nbsp;
-                  <Link to="/project-tags/javascript">Javascript</Link>
+                  <Link to="/project-tags/javascript">Javascript</Link>,&nbsp;
+                  <Link to="/project-tags/java">Java</Link>
                   </strong></li>
                   <li><strong>
                   <Link to="/project-tags/wordpress">Wordpress</Link>,&nbsp;
-                  <Link to="/project-tags/gatsby">Gatsby</Link>
+                  <Link to="/project-tags/gatsby">Gatsby</Link>,&nbsp;
+                  <Link to="/project-tags/webassembly">WebAssembly</Link>
                   </strong></li>
                   <li><strong>
                   <Link to="/project-tags/react">React</Link>,&nbsp;
                   <Link to="/project-tags/open-gl">OpenGL</Link>,&nbsp;
-                  <Link to="/project-tags/qt-5">SDL2</Link>,&nbsp;
-                  <Link to="/project-tags/sdl-2">QT5</Link>,&nbsp;
-                  <Link to="/project-tags/godot">Godot</Link>,&nbsp;
+                  <Link to="/project-tags/sdl2">SDL2</Link>,&nbsp;
+                  <Link to="/project-tags/qt-5">QT5</Link>,&nbsp;
+                  <Link to="/project-tags/godot">Godot</Link>
                   </strong></li>
                   <li><strong>
                   Linux, Git, Make, CMake, Maven, Cargo
@@ -97,7 +98,8 @@ class AboutPage extends React.Component {
           <h1> Timeline </h1>
           <span>
                 I started programming Python at the age of 15, which started a lifelong passion of programming. 
-                I'm currently pursuing a degree in Computer Science at Umeå University. That's about it, so far.
+                I'm currently pursuing a degree in Computer Science at Umeå University. I am also an assistant teacher for the 
+                introductory course in C programming at Umeå University.
             </span>
           </div>
           </div>

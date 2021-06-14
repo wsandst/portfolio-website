@@ -8,7 +8,6 @@ tags:
     - machine-learning
     - PyTorch
     - games
-    - pinned
 description: "This project is still under development. A modern UCI Chess Engine implemented in C++ with state of the art Bitboards. It is being developed to use
 machine learning (via PyTorch) together with a Monte Carlo tree search for playing."
 aim: "The aim of this project was to experiment with various machine learning techniques in relation to game tree search. It was also to improve on the general chess engine foundations laid by Magnificence 1. Inspired by AlphaZero and LeelaChessZero."

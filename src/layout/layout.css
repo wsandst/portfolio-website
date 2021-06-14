@@ -109,6 +109,10 @@ body.light .light-icon
   display: none;
 }
 
+.theme-icon {
+  margin-bottom: 1.16rem;
+}
+
 #gatsby-announcer
 {
   background-color: #1A1A1A;
