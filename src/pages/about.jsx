@@ -49,16 +49,17 @@ class AboutPage extends React.Component {
           <div css={css`border-right: 1px solid var(--hr); padding-right: ${rhythm(1)};`}>
           <h1> Knowledge </h1>
           <span>
-                Throughout my various projects I have learned many different programming languages and frameworks.
+                Throughout my various projects I have learned several different programming languages and frameworks.
                 Here's a list of some of them.
                 <ul css={css`padding-top: 1rem;`}>
                   <li><strong>
                   <Link to="/project-tags/python">Python</Link>,&nbsp;
-                  <Link to="/project-tags/c">C++</Link>,&nbsp;
-                  <Link to="/project-tags/rust">Rust</Link>,&nbsp;
                   <Link to="/project-tags/c">C</Link>,&nbsp;
+                  <Link to="/project-tags/rust">Rust</Link>,&nbsp;
+                  <Link to="/project-tags/cpp">C++</Link>,&nbsp;
+                  <Link to="/project-tags/java">Java</Link>,&nbsp;
                   <Link to="/project-tags/javascript">Javascript</Link>,&nbsp;
-                  <Link to="/project-tags/java">Java</Link>
+                  <Link to="/project-tags/assembly">Assembly</Link>
                   </strong></li>
                   <li><strong>
                   <Link to="/project-tags/wordpress">Wordpress</Link>,&nbsp;
@@ -98,8 +99,8 @@ class AboutPage extends React.Component {
           <h1> Timeline </h1>
           <span>
                 I started programming Python at the age of 15, which started a lifelong passion of programming. 
-                I'm currently pursuing a degree in Computer Science at Umeå University. I am also an assistant teacher for the 
-                introductory course in C programming at Umeå University.
+                I'm currently pursuing a degree in Computer Science at Umeå University, where I also am an assistant teacher for the 
+                introductory course in C programming.
             </span>
           </div>
           </div>
@@ -116,7 +117,6 @@ class AboutPage extends React.Component {
                 <ul css={css`padding-top: 1rem;`}>
                 <li><strong>Github:</strong> <a href="https://github.com/wsandst"> wsandst </a> </li>
                 <li><strong>Twitter:</strong> <a href="https://twitter.com/_wsandst_">_wsandst_</a> </li>
-                <li><strong>Discord:</strong> Wydal#4592 </li>
                 </ul>
                 </span>
           </div>
@@ -142,7 +142,7 @@ query ImageQuery {
           }
       }
     }
-  profile2: file(relativePath: { eq: "profile2.png" }) {
+  profile2: file(relativePath: { eq: "profile2.jpg" }) {
     childImageSharp {
       fixed(width: 160, height: 160, quality:90) {
         ...GatsbyImageSharpFixed_withWebp

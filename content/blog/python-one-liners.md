@@ -1,6 +1,6 @@
 ---
 title: "Sorting Algorithms with One Line of Python"
-cover: "./pi-viz-cover.png"
+cover: "./python-one-liners-cover.png"
 date: "2020-03-02"
 tags:
     - python

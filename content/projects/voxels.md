@@ -3,7 +3,7 @@ title: "Simple Voxel Engine"
 cover: "./voxels-cover.jpg"
 date: "2019-01-01"
 tags:
-    - c++
+    - cpp
     - voxels
     - rendering
     - SDL2

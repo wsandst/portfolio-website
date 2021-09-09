@@ -3,7 +3,7 @@ title: "Fractal Raymarcher"
 cover: "./fractal-raymarcher-cover.jpg"
 date: "2020-02-01"
 tags:
-    - c++
+    - cpp
     - rendering
     - raymarching
     - OpenGL
