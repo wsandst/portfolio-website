@@ -6,4 +6,4 @@ npm install
 npm run build
 mv public ../../../static/snowflakes
 cd ../../
-rm snowflake-sim
+rm snowflake-sim -rf
