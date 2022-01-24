@@ -6,6 +6,7 @@ tags:
     - python
     - one-liners
     - sorting
+    - blog
 ---
 This post is dedicated to several Python one-liners for different Sorting Algorithms, written by me and my friend Harald Bjurulf. 
 Most problems are generally solveable in one line with Python, especially if you use the walrus operator or itertools, and sorting is no exception.  

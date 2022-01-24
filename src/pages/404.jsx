@@ -1,7 +1,7 @@
 import React from "react";
 
 import Helmet from "react-helmet";
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { rhythm } from "../utils/typography"
 
 import MainLayout from "../layout/layout";

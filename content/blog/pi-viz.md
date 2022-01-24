@@ -4,9 +4,9 @@ cover: "./pi-viz-cover.png"
 date: "2020-02-13"
 tags:
     - pi
-    - blog
     - python
     - computing
+    - blog
 ---
 One of the first programming projects I ever did, back in 2016, was to try and convert 100 million digits of pi into a single image.
 I took a text file I found online of the first 100 million digits of pi in decimal, and went through every one and

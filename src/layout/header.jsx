@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { rhythm } from "../utils/typography"
 import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 

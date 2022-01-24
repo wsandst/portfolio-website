@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Helmet from "react-helmet";
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 import MainLayout from "../layout/layout";
 import BlogListing from "../components/BlogListing";

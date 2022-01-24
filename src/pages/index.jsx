@@ -2,7 +2,7 @@ import React from "react";
 import { Link, graphql } from "gatsby"
 
 import Helmet from "react-helmet";
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { rhythm } from "../utils/typography"
 
 import MainLayout from "../layout/layout";
@@ -16,17 +16,14 @@ class HomePage extends React.Component {
       const postEdges = this.props.data.allMarkdownRemark.edges;
       return (
         <MainLayout>
-          <Helmet title={config.siteTitle} />
           <SEO />
-          <div className="landing-container">
-            <AboutShort></AboutShort>
-            <div className="posts-container">
-              <ProjectListing postEdges={postEdges} />
-              <Link to={"/projects/"} css={css`margin-top: ${rhythm(1)}; padding-bottom: ${rhythm(4.5)}; display: flex; justify-content: center; font-size:90%; color: var(--textNormal);
-              &:hover {color: var(--textHighlight);} `}> 
-              More Projects
-              </Link>
-            </div>
+          <AboutShort></AboutShort>
+          <div className="posts-container" css={css`height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-grow: 1;`}>
+            <ProjectListing postEdges={postEdges} />
+            <Link to={"/projects/"} css={css`margin-top: ${rhythm(1)}; padding-bottom: ${rhythm(4.5)}; display: flex; justify-content: center; font-size:90%; color: var(--textNormal);
+            &:hover {color: var(--textHighlight);} `}> 
+            More Projects
+            </Link>
           </div>
         </MainLayout>
       );

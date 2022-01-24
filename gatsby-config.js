@@ -26,7 +26,6 @@ module.exports = {
         omitGoogleFont: true,
       },
     },
-    "gatsby-plugin-preact",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-lodash",
     "gatsby-plugin-sharp",
@@ -132,15 +131,5 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: "gatsby-plugin-netlify-cms",
-      options: {
-        modulePath: path.resolve("src/netlifycms/index.js"), // default: undefined
-        enableIdentityWidget: false,
-        publicPath: "admin",
-        htmlTitle: "Content Manager",
-        includeRobots: false
-      }
-    }
   ]
 };
