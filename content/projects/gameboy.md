@@ -4,7 +4,7 @@ cover: "./gameboy-cover.jpg"
 date: "2021-06-09"
 tags:
     - rust
-    - webassembly
+    - WebAssembly
     - SDL2
     - javascript
     - svelte

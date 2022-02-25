@@ -66,12 +66,12 @@ class AboutPage extends React.Component {
                   <Link to="/project-tags/gatsby">Gatsby</Link>,&nbsp;
                   <Link to="/project-tags/react">React</Link>,&nbsp;
                   <Link to="/project-tags/svelte">Svelte</Link>,&nbsp;
-                  <Link to="/project-tags/webassembly">WebAssembly</Link>
+                  <Link to="/project-tags/web-assembly">WebAssembly</Link>
                   </strong></li>
                   <li><strong>
-                  <Link to="/project-tags/opengl">OpenGL</Link>,&nbsp;
-                  <Link to="/project-tags/sdl2">SDL2</Link>,&nbsp;
-                  <Link to="/project-tags/qt5">QT5</Link>,&nbsp;
+                  <Link to="/project-tags/open-gl">OpenGL</Link>,&nbsp;
+                  <Link to="/project-tags/sdl-2">SDL2</Link>,&nbsp;
+                  <Link to="/project-tags/qt-5">QT5</Link>,&nbsp;
                   <Link to="/project-tags/godot">Godot</Link>
                   </strong></li>
                   <li><strong>
