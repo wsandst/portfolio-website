@@ -19,7 +19,7 @@ class HomePage extends React.Component {
         <AboutShort></AboutShort>
         <div className="posts-container" css={css`height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-grow: 1;`}>
           <ProjectListing postEdges={postEdges} />
-          <Link to={"/projects/"} css={css`margin-top: ${rhythm(0.5)}; padding-bottom: ${rhythm(4.0)}; display: flex; justify-content: center; font-size:90%; color: var(--textNormal);
+          <Link to={"/projects/"} css={css`margin-top: ${rhythm(0.5)}; padding-bottom: ${rhythm(4)}; display: flex; justify-content: center; font-size:90%; color: var(--textNormal);
           &:hover {color: var(--textHighlight);} `}> 
           More Projects
           </Link>
