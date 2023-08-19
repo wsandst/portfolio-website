@@ -1,3 +1,7 @@
+html {
+  overflow-y: auto;
+}
+
 body {
   --bg: white;
   --bgup1: white;
@@ -57,6 +61,8 @@ body.fade-themes
   margin-right: auto;
   margin-top: 0;
   min-height: max(calc(100vh - 82px), 750px);
+  display: flex;
+  flex-direction: column;
 }
 
 .header
