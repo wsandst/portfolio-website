@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import Helmet from "react-helmet";
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 import MainLayout from "../layout/layout";
 import PostTags from "../components/BlogPostTags";

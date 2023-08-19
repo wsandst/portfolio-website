@@ -54,7 +54,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
    {
-    blogPosts: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(blog)/"  }}) {
+    blogPosts: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(content\/blog)/"  }}) {
           edges {
             node {
               fields {
@@ -69,7 +69,7 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
-    projectPosts: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(projects)/"  }}) {
+    projectPosts: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(content\/projects)/"  }}) {
         edges {
           node {
             fields {

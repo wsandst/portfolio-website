@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Helmet from "react-helmet";
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 import MainLayout from "../layout/layout";
 import ProjectListing from "../components/ProjectListing";
@@ -26,31 +26,33 @@ class ProjectsPage extends React.Component {
 export default ProjectsPage;
 
 export const pageQuery = graphql`
-query ProjectsQuery {
-  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(projects)/"  }}, sort: { fields: [fields___date], order: DESC })
-  {
-    edges {
-      node {
-        fields {
-          slug
-          date
-        }
-        excerpt
-        timeToRead
-        frontmatter {
-          title
-          tags
-          cover {
-            childImageSharp {
-            fixed(width: 255, height: 339, quality:90) {
-              ...GatsbyImageSharpFixed_withWebp
-                }
-            }
+  query ProjectsQuery {
+    allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(content/projects)/"}}
+      sort: {fields: {date: DESC}}
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+            date
           }
-          date(formatString: "MMMM Do, YYYY")
+          excerpt
+          timeToRead
+          frontmatter {
+            title
+            tags
+            cover {
+              childImageSharp {
+                fixed(width: 255, height: 339, quality: 90) {
+                  ...GatsbyImageSharpFixed_withWebp
+                }
+              }
+            }
+            date(formatString: "MMMM Do, YYYY")
+          }
         }
       }
     }
   }
-}
 `;

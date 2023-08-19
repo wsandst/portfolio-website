@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import { rhythm, scale } from "../utils/typography"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import GitHubButton from 'react-github-btn'
 
 export default function AboutShort() {

@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 
 
 import Helmet from "react-helmet";
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 import MainLayout from "../layout/layout";
 import BlogListing from "../components/BlogListing";
@@ -27,31 +27,33 @@ class BlogPage extends React.Component {
 export default BlogPage;
 
 export const blogPageQuery = graphql`
-query BlogQuery {
-  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(blog)/"  }}, sort: { fields: [fields___date], order: DESC })
-  {
-    edges {
-      node {
-        fields {
-          slug
-          date
-        }
-        excerpt
-        timeToRead
-        frontmatter {
-          title
-          tags
-          cover {
-            childImageSharp {
-            fixed(width: 50, height: 50, quality:90) {
-              ...GatsbyImageSharpFixed_withWebp
-                }
-            }
+  query BlogQuery {
+    allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/(content/blog)/"}}
+      sort: {fields: {date: DESC}}
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+            date
           }
-          date(formatString: "MMMM Do, YYYY")
+          excerpt
+          timeToRead
+          frontmatter {
+            title
+            tags
+            cover {
+              childImageSharp {
+                fixed(width: 50, height: 50, quality: 90) {
+                  ...GatsbyImageSharpFixed_withWebp
+                }
+              }
+            }
+            date(formatString: "MMMM Do, YYYY")
+          }
         }
       }
     }
   }
-}
 `;

@@ -2,9 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { rhythm } from "../utils/typography"
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+import { ThemeToggler } from '../../plugins/gatsby-plugin-dark-mode-mod'
 
 import config from "../../data/SiteConfig";
 import lighticon from '../../static/light.svg'

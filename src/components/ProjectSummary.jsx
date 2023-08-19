@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import Img from "gatsby-image"
 
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { rhythm } from "../utils/typography"
 import GitHubButton from "../../node_modules/react-github-btn/index";
 

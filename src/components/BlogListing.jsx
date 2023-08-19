@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 class BlogListing extends React.Component {
   getPostList() {

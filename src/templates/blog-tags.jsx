@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Helmet from "react-helmet";
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 import MainLayout from "../layout/layout";
 import BlogListing from "../components/BlogListing";
@@ -29,8 +29,8 @@ export const pageQuery = graphql`
   query BlogTagPage($tag: String) {
     allMarkdownRemark(
       limit: 1000
-      sort: { fields: [fields___date], order: DESC }
-      filter: { fileAbsolutePath: {regex: "/(blog)/"  }, frontmatter: { tags: { in: [$tag] } } }
+      sort: {fields: {date: DESC}}
+      filter: {fileAbsolutePath: {regex: "/(content/blog)/"}, frontmatter: {tags: {in: [$tag]}}}
     ) {
       totalCount
       edges {
@@ -45,12 +45,12 @@ export const pageQuery = graphql`
             title
             tags
             cover {
-                childImageSharp {
-                fixed(width: 50, height: 50, quality:90) {
+              childImageSharp {
+                fixed(width: 50, height: 50, quality: 90) {
                   ...GatsbyImageSharpFixed
-                    }
                 }
               }
+            }
             date(formatString: "MMMM Do, YYYY")
           }
         }

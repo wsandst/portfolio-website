@@ -3,7 +3,7 @@ import {graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Helmet from "react-helmet";
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import { rhythm } from "../utils/typography"
 
 import MainLayout from "../layout/layout";
@@ -98,8 +98,7 @@ class AboutPage extends React.Component {
           <h1> Timeline </h1>
           <span>
                 I started programming Python at the age of 15, which started a lifelong passion of programming. 
-                I'm currently pursuing a degree in Computer Science at Umeå University. I am also an assistant teacher for the 
-                introductory course in C programming at Umeå University.
+                I've studied a few years of Computer Science at Umeå University, where I also was an assistant teacher.
             </span>
           </div>
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Helmet from "react-helmet";
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 
 import MainLayout from "../layout/layout";
 import ProjectListing from "../components/ProjectListing";
@@ -29,8 +29,8 @@ export const pageQuery = graphql`
   query ProjectTagPage($tag: String) {
     allMarkdownRemark(
       limit: 1000
-      sort: { fields: [fields___date], order: DESC }
-      filter: { fileAbsolutePath: {regex: "/(projects)/"  }, frontmatter: { tags: { in: [$tag] } } }
+      sort: {fields: {date: DESC}}
+      filter: {fileAbsolutePath: {regex: "/(content/projects)/"}, frontmatter: {tags: {in: [$tag]}}}
     ) {
       totalCount
       edges {
@@ -46,9 +46,9 @@ export const pageQuery = graphql`
             tags
             cover {
               childImageSharp {
-              fixed(width: 255, height: 339, quality:90) {
-                ...GatsbyImageSharpFixed
-                  }
+                fixed(width: 255, height: 339, quality: 90) {
+                  ...GatsbyImageSharpFixed
+                }
               }
             }
             date
