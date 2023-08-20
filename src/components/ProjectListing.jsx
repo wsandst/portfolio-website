@@ -28,7 +28,7 @@ class ProjectListing extends React.Component {
       <div css={css`display: flex; justify-content: center; flex-wrap: wrap`}>
         {/* Your post list here. */
         postList.map(post => (
-          <ProjectCover post={post}/>
+          <ProjectCover key={post.title} post={post}/>
         ))}
       </div>
     );
